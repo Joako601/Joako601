@@ -18,6 +18,19 @@ Mi enfoque no solo es escribir código, sino diseñar soluciones que resuelvan p
 
 ---
 
+## ✴︎ Actualmente Aprendiendo
+
+* AWS y sus servicios en la nube
+* Cómo funcionan las APIs a profundidad (diseño, consumo e integración)
+
+---
+
+## 愛 Objetivo Profesional
+
+Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendiendo y mejorando mis habilidades técnicas en un entorno real de desarrollo.
+
+---
+
 ## ✦ Stack Tecnológico
 
 <table align="center">
@@ -110,12 +123,12 @@ Mi enfoque no solo es escribir código, sino diseñar soluciones que resuelvan p
 
 ---
 
-## ▶ Proyectos Destacados
+## ☕︎ Proyectos Destacados
 
-### ⬢ [market-backend](https://github.com/Joako601/market-backend)
+### 𝓜 [market-backend](https://github.com/Joako601/market-backend)
 API REST en **Java + Spring Boot**, con arquitectura limpia por capas (domain, persistence, service, controller). Gestión de compras con relaciones JPA (`@OneToMany`, `@MapsId`), mapeo con **MapStruct** y buenas prácticas RESTful (manejo de estados 201/404).
 
-### ⬢ [Proyecto Jo'](https://github.com/Joako601/Proyecto-Jo)
+### ☁︎ [Proyecto Jo'](https://github.com/Joako601/Proyecto-Jo)
 Sistema de gestión financiera y administrativa para pequeños y medianos negocios, construido en **ASP.NET Core (.NET 10)** bajo **Arquitectura Hexagonal (Ports & Adapters)**. Incluye panel administrativo con Razor Views, sincronización en tiempo real vía **SignalR** para Cocina/Recepción, API REST documentada con Swagger, y una suite de 26 tests con xUnit + Moq.
 
 ---
@@ -160,8 +173,12 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 ## ▣ Estadísticas de Desarrollo
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Joako601&show_icons=true&theme=radical&hide_border=true&cache_seconds=86400" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Joako601&layout=compact&theme=radical&hide_border=true&cache_seconds=86400" width="48%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Joako601&show_icons=true&theme=radical&hide_border=true" width="48%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Joako601&layout=compact&theme=radical&hide_border=true" width="48%" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Joako601&theme=react-dark&hide_border=true" width="97%" />
 </div>
 
 ---
