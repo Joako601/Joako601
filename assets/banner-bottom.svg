@@ -1,0 +1,87 @@
+<svg width="1200" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6b1730"/>
+      <stop offset="30%" stop-color="#3d0e2e"/>
+      <stop offset="65%" stop-color="#1a0a3d"/>
+      <stop offset="100%" stop-color="#0d0221"/>
+    </linearGradient>
+    <linearGradient id="cityFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a0f3d"/>
+      <stop offset="100%" stop-color="#150a20"/>
+    </linearGradient>
+    <linearGradient id="cityNear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0510"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="200" fill="url(#sky2)"/>
+
+  <!-- stars -->
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="60" cy="25" r="1"/><circle cx="180" cy="45" r="1.2"/><circle cx="300" cy="20" r="1"/>
+    <circle cx="420" cy="50" r="1"/><circle cx="540" cy="30" r="1.3"/><circle cx="660" cy="55" r="1"/>
+    <circle cx="780" cy="25" r="1"/><circle cx="900" cy="45" r="1.2"/><circle cx="1020" cy="20" r="1"/>
+    <circle cx="1140" cy="50" r="1"/><circle cx="850" cy="70" r="1"/><circle cx="960" cy="65" r="1"/>
+    <circle cx="380" cy="70" r="1"/><circle cx="240" cy="75" r="1"/>
+  </g>
+  <g fill="#F2A93B">
+    <circle cx="120" cy="35" r="1.6"/><circle cx="360" cy="40" r="1.8"/><circle cx="1080" cy="35" r="1.6"/>
+    <circle cx="200" cy="65" r="1.4"/><circle cx="1000" cy="60" r="1.4"/><circle cx="470" cy="60" r="1.4"/>
+  </g>
+
+  <!-- moon, echoing top banner -->
+  <circle cx="1080" cy="55" r="20" fill="#FCEFCB" opacity="0.9"/>
+  <circle cx="1088" cy="49" r="3" fill="#E8C978" opacity="0.5"/>
+  <circle cx="1072" cy="62" r="2" fill="#E8C978" opacity="0.5"/>
+
+  <!-- far skyline silhouette -->
+  <g fill="url(#cityFar)" opacity="0.85">
+    <rect x="0" y="140" width="1200" height="60"/>
+    <rect x="40" y="115" width="26" height="85"/>
+    <rect x="80" y="125" width="20" height="75"/>
+    <rect x="980" y="120" width="24" height="80"/>
+    <rect x="1020" y="130" width="18" height="70"/>
+  </g>
+
+  <!-- near buildings, Obelisco (Argentina) and Piramide (Mexico), dark silhouette -->
+  <g fill="url(#cityNear)">
+    <rect x="0" y="160" width="1200" height="40"/>
+    <rect x="140" y="135" width="24" height="65"/>
+    <rect x="175" y="145" width="18" height="55"/>
+    <rect x="900" y="140" width="24" height="60"/>
+    <rect x="935" y="148" width="18" height="52"/>
+
+    <!-- Obelisco de Buenos Aires -->
+    <path d="M418 200 L418 90 L428 60 L438 90 L438 200 Z"/>
+    <rect x="414" y="200" width="28" height="6"/>
+
+    <!-- Piramide mesoamericana escalonada (referencia a Mexico) -->
+    <path d="M690 200 L690 175 L710 175 L710 155 L730 155 L730 135 L750 135 L750 115 L770 115 L770 135 L790 135 L790 155 L810 155 L810 175 L830 175 L830 200 Z"/>
+    <!-- escalinata central -->
+    <rect x="754" y="115" width="12" height="85" fill="#0a0510"/>
+  </g>
+
+  <!-- sol de mayo sutil sobre el Obelisco -->
+  <g transform="translate(428,45)" opacity="0.3">
+    <circle r="7" fill="#F2A93B"/>
+    <g stroke="#F2A93B" stroke-width="1.3">
+      <line x1="0" y1="-12" x2="0" y2="-9"/>
+      <line x1="0" y1="12" x2="0" y2="9"/>
+      <line x1="-12" y1="0" x2="-9" y2="0"/>
+      <line x1="12" y1="0" x2="9" y2="0"/>
+    </g>
+  </g>
+
+  <!-- estrella/detalle azteca sutil sobre la piramide -->
+  <g transform="translate(760,105)" opacity="0.3">
+    <circle r="6" fill="#F2A93B"/>
+    <g stroke="#F2A93B" stroke-width="1.3">
+      <line x1="-9" y1="-9" x2="-6" y2="-6"/>
+      <line x1="9" y1="-9" x2="6" y2="-6"/>
+      <line x1="-9" y1="9" x2="-6" y2="6"/>
+      <line x1="9" y1="9" x2="6" y2="6"/>
+    </g>
+  </g>
+</svg>
