@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=600&speed=40&color=F2A93B&center=true&vCenter=true&multiline=true&width=450&height=80&lines=Hola%2C+soy+Joaquin+Uriona;Backend+Developer" alt="Typing SVG" />
+  <img src="./assets/banner-top.svg" width="100%"/>
 </div>
 
 <div align="center">
@@ -181,7 +181,9 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Joako601&theme=react-dark&hide_border=true" width="97%" />
 </div>
 
----
+<div align="center">
+  <img src="./assets/banner-bottom.svg" width="100%"/>
+</div>
 
 <div align="center">
   <sub>Gracias por tu interés en mi perfil.</sub>
