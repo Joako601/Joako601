@@ -17,39 +17,75 @@
     .line1 {
       font-family: 'Fira Code', monospace;
       font-size: 44px;
-      font-weight: 700;
+      font-weight: 600;
+      letter-spacing: 1px;
       fill: #FCEFCB;
+      filter: drop-shadow(0 0 6px rgba(242, 169, 59, 0.4));
     }
     .line2 {
       font-family: 'Fira Code', monospace;
       font-size: 20px;
+      font-weight: 500;
       fill: #F2A93B;
-      letter-spacing: 4px;
+      letter-spacing: 6px;
     }
 
     .typeLine1 {
       overflow: hidden;
       white-space: nowrap;
-      animation: typing1 2.2s steps(17, end) forwards, hide1 1.2s 3.2s forwards;
+      animation: typeClip1 8s steps(14, end) infinite,
+                 showHide1 8s linear infinite;
     }
     .typeLine2 {
       overflow: hidden;
       white-space: nowrap;
-      opacity: 0;
-      animation: reveal2 0.1s 2.4s forwards, typing2 1.6s 2.4s steps(17, end) forwards, hide2 1.2s 5.2s forwards;
+      animation: typeClip2 8s steps(17, end) infinite,
+                 showHide2 8s linear infinite;
     }
 
-    @keyframes typing1 {
-      from { clip-path: inset(0 100% 0 0); }
-      to { clip-path: inset(0 0 0 0); }
+    /* tipeo letra por letra, tipo maquina de escribir */
+    @keyframes typeClip1 {
+      0%          { clip-path: inset(0 100% 0 0); }
+      27.5%, 100% { clip-path: inset(0 0 0 0); }
     }
-    @keyframes typing2 {
-      from { clip-path: inset(0 100% 0 0); }
-      to { clip-path: inset(0 0 0 0); }
+    @keyframes typeClip2 {
+      0%, 30%   { clip-path: inset(0 100% 0 0); }
+      50%, 100% { clip-path: inset(0 0 0 0); }
     }
-    @keyframes reveal2 { to { opacity: 1; } }
-    @keyframes hide1 { to { opacity: 0.15; } }
-    @keyframes hide2 { to { opacity: 0.15; } }
+
+    /* aparicion / desvanecido, separado del tipeo */
+    @keyframes showHide1 {
+      0%   { opacity: 1; }
+      90%  { opacity: 0.15; }
+      97%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes showHide2 {
+      0%     { opacity: 0; }
+      30.1%  { opacity: 1; }
+      80%    { opacity: 1; }
+      95%    { opacity: 0.15; }
+      100%   { opacity: 0; }
+    }
+
+    .twinkle-a { animation: twinkle 2.5s ease-in-out infinite; }
+    .twinkle-b { animation: twinkle 3.2s ease-in-out infinite; }
+    .twinkle-c { animation: twinkle 4s ease-in-out infinite; }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 1; }
+    }
+
+    .shooting-star {
+      opacity: 0;
+      animation: shoot 12s linear infinite;
+    }
+    @keyframes shoot {
+      0%   { opacity: 0; transform: translate(0, 0); }
+      2%   { opacity: 1; }
+      8%   { opacity: 0; transform: translate(260px, 110px); }
+      100% { opacity: 0; transform: translate(260px, 110px); }
+    }
   </style>
 
   <rect width="1200" height="280" fill="url(#sky)"/>
@@ -70,24 +106,31 @@
 
   <!-- mid stars, golden -->
   <g fill="#F2A93B">
-    <circle cx="150" cy="45" r="1.8"/><circle cx="330" cy="25" r="1.6"/><circle cx="500" cy="55" r="1.8"/>
-    <circle cx="680" cy="20" r="1.6"/><circle cx="850" cy="45" r="1.8"/><circle cx="1030" cy="60" r="1.6"/>
-    <circle cx="220" cy="90" r="1.5"/><circle cx="410" cy="70" r="1.5"/><circle cx="590" cy="90" r="1.5"/>
-    <circle cx="770" cy="75" r="1.5"/><circle cx="950" cy="90" r="1.5"/><circle cx="1120" cy="80" r="1.5"/>
-    <circle cx="100" cy="180" r="1.4"/><circle cx="480" cy="190" r="1.4"/><circle cx="860" cy="185" r="1.4"/>
+    <circle cx="150" cy="45" r="1.8" class="twinkle-a"/><circle cx="330" cy="25" r="1.6" class="twinkle-b"/><circle cx="500" cy="55" r="1.8"/>
+    <circle cx="680" cy="20" r="1.6" class="twinkle-c"/><circle cx="850" cy="45" r="1.8" class="twinkle-a"/><circle cx="1030" cy="60" r="1.6"/>
+    <circle cx="220" cy="90" r="1.5"/><circle cx="410" cy="70" r="1.5" class="twinkle-b"/><circle cx="590" cy="90" r="1.5"/>
+    <circle cx="770" cy="75" r="1.5" class="twinkle-c"/><circle cx="950" cy="90" r="1.5"/><circle cx="1120" cy="80" r="1.5" class="twinkle-a"/>
+    <circle cx="100" cy="180" r="1.4"/><circle cx="480" cy="190" r="1.4" class="twinkle-b"/><circle cx="860" cy="185" r="1.4"/>
   </g>
 
   <!-- bright close stars with sparkle -->
   <g fill="#ffffff">
-    <circle cx="90" cy="55" r="2.5"/>
-    <circle cx="1120" cy="180" r="2.5"/>
-    <circle cx="60" cy="220" r="2.3"/>
+    <circle cx="90" cy="55" r="2.5" class="twinkle-a"/>
+    <circle cx="1120" cy="180" r="2.5" class="twinkle-b"/>
+    <circle cx="60" cy="220" r="2.3" class="twinkle-c"/>
     <path d="M90 45 L92 55 L90 65 L88 55 Z" opacity="0.7"/>
     <path d="M80 55 L90 57 L100 55 L90 53 Z" opacity="0.7"/>
   </g>
 
+  <!-- shooting star -->
+  <g class="shooting-star">
+    <line x1="120" y1="30" x2="60" y2="15" stroke="#FCEFCB" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
   <!-- moon with glow -->
-  <circle cx="1000" cy="75" r="75" fill="url(#moonGlow)"/>
+  <circle cx="1000" cy="75" r="75" fill="url(#moonGlow)">
+    <animate attributeName="r" values="75;82;75" dur="6s" repeatCount="indefinite"/>
+  </circle>
   <circle cx="1000" cy="75" r="28" fill="#FCEFCB"/>
   <circle cx="1011" cy="66" r="4" fill="#E8C978" opacity="0.6"/>
   <circle cx="993" cy="84" r="6" fill="#E8C978" opacity="0.5"/>
