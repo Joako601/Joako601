@@ -172,23 +172,18 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <tr>
 <td align="center" width="25%">
 <a href="https://www.credly.com/badges/0a8ca206-bcbe-41a9-b6ae-d0517f77b1e7/linked_in_profile">
-<img src="https://images.credly.com/images/07e7ba52-aea4-431f-ba2d-a4113efd1d5a/linkedin_thumb_blob" width="160"/>
+<img src="https://images.credly.com/images/07e7ba52-aea4-431f-ba2d-a4113efd1d5a/blob" width="160" alt="AWS Academy Graduate - Cloud Operations - Training Badge"/>
 </a>
 </td>
 <td align="center" width="25%">
 <a href="https://www.credly.com/badges/de499ea0-8d96-4c70-9206-1453670307ad/linked_in_profile">
-<img src="https://images.credly.com/images/e3541a0c-dd4a-4820-8052-5001006efc85/linkedin_thumb_blob" width="160"/>
+<img src="https://images.credly.com/images/e3541a0c-dd4a-4820-8052-5001006efc85/blob" width="160" alt="AWS Academy Graduate - Cloud Foundations - Training Badge"/>
 </a>
 </td>
 <td align="center" width="25%">
 <a href="https://www.credly.com/badges/0b536b28-de3a-4cf2-b548-160519c4bb9e/linked_in_profile">
-<img src="https://images.credly.com/images/978f88dc-c247-4093-9d39-6efac3651297/linkedin_thumb_image.png" width="160"/>
+<img src="https://images.credly.com/images/978f88dc-c247-4093-9d39-6efac3651297/image.png" width="160" alt="Network Technician Career Path"/>
 </a>
-</td>
-<td align="center" width="25%">
-
-[![Coursera](https://img.shields.io/badge/Programming%20with%20Java-0056D2?style=for-the-badge&logo=coursera&logoColor=white)](https://www.coursera.org/account/accomplishments/records/5188MMAHKN5R)
-
 </td>
 </tr>
 </table>
