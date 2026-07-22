@@ -1,0 +1,10 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^https://img.shields.io" },
+    { "pattern": "^https://skillicons.dev" },
+    { "pattern": "^https://github-readme-stats" },
+    { "pattern": "^https://github-readme-activity-graph" }
+  ],
+  "retryOn429": true,
+  "retryCount": 3
+}
