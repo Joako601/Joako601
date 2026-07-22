@@ -1,0 +1,35 @@
+name: Update Credly certifications
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update-certs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch Credly badges
+        run: |
+          curl -s "https://www.credly.com/users/joaquin-uriona/badges.json" -o badges.json
+
+      - name: Generate certifications table
+        run: python .github/scripts/gen_certs.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet && exit 0
+          git add README.md
+          git commit -m " Actualizar certificaciones desde Credly"
+          git push
