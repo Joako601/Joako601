@@ -3,7 +3,8 @@
     { "pattern": "^https://img.shields.io" },
     { "pattern": "^https://skillicons.dev" },
     { "pattern": "^https://github-readme-stats" },
-    { "pattern": "^https://github-readme-activity-graph" }
+    { "pattern": "^https://github-readme-activity-graph" },
+    { "pattern": "^https://www.linkedin.com" }
   ],
   "retryOn429": true,
   "retryCount": 3
