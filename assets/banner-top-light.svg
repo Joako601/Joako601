@@ -1,0 +1,185 @@
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyDay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5EC6E8"/>
+      <stop offset="45%" stop-color="#8FD9EE"/>
+      <stop offset="75%" stop-color="#FBE7A1"/>
+      <stop offset="100%" stop-color="#F7C873"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD166" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#FFD166" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFD166" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .line1d {
+      font-family: 'Fira Code', monospace;
+      font-size: 44px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      fill: #2E2A1F;
+      filter: drop-shadow(0 0 6px rgba(255, 209, 102, 0.5));
+    }
+    .line2d {
+      font-family: 'Fira Code', monospace;
+      font-size: 20px;
+      font-weight: 500;
+      fill: #C97F2A;
+      letter-spacing: 6px;
+    }
+
+    .typeLine1d {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typeClip1 8s steps(14, end) infinite,
+                 showHide1 8s linear infinite;
+    }
+    .typeLine2d {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typeClip2 8s steps(17, end) infinite,
+                 showHide2 8s linear infinite;
+    }
+
+    @keyframes typeClip1 {
+      0%          { clip-path: inset(0 100% 0 0); }
+      27.5%, 100% { clip-path: inset(0 0 0 0); }
+    }
+    @keyframes typeClip2 {
+      0%, 30%   { clip-path: inset(0 100% 0 0); }
+      50%, 100% { clip-path: inset(0 0 0 0); }
+    }
+    @keyframes showHide1 {
+      0%   { opacity: 1; }
+      90%  { opacity: 0.3; }
+      97%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes showHide2 {
+      0%     { opacity: 0; }
+      30.1%  { opacity: 1; }
+      80%    { opacity: 1; }
+      95%    { opacity: 0.3; }
+      100%   { opacity: 0; }
+    }
+
+    /* nubes moviendose */
+    .cloud1 { animation: drift1 26s linear infinite; }
+    .cloud2 { animation: drift2 34s linear infinite; }
+    .cloud3 { animation: drift3 40s linear infinite; }
+    @keyframes drift1 {
+      0%   { transform: translateX(-180px); }
+      100% { transform: translateX(1380px); }
+    }
+    @keyframes drift2 {
+      0%   { transform: translateX(-220px); }
+      100% { transform: translateX(1420px); }
+    }
+    @keyframes drift3 {
+      0%   { transform: translateX(-160px); }
+      100% { transform: translateX(1360px); }
+    }
+
+    /* sol respirando */
+    .sunPulse { animation: sunBreathe 6s ease-in-out infinite; }
+    @keyframes sunBreathe {
+      0%, 100% { r: 75; opacity: 0.85; }
+      50% { r: 82; opacity: 1; }
+    }
+
+    /* pajaros cruzando */
+    .birds { animation: birdFly 18s linear infinite; opacity: 0; }
+    @keyframes birdFly {
+      0%   { transform: translate(-40px, 0); opacity: 0; }
+      5%   { opacity: 0.5; }
+      45%  { opacity: 0.5; }
+      50%  { transform: translate(500px, -20px); opacity: 0; }
+      100% { transform: translate(500px, -20px); opacity: 0; }
+    }
+
+    /* destellos de sol sobre el "mar" de fondo, sutil */
+    .sparkle-a { animation: sparkle 3s ease-in-out infinite; }
+    .sparkle-b { animation: sparkle 4s ease-in-out infinite; }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+
+  <rect width="1200" height="280" fill="url(#skyDay)"/>
+
+  <!-- nubes lejanas, chicas -->
+  <g fill="#FFFFFF" opacity="0.75">
+    <g class="cloud3" transform="translate(0,50)">
+      <ellipse cx="0" cy="0" rx="30" ry="12"/>
+      <ellipse cx="22" cy="-5" rx="20" ry="10"/>
+      <ellipse cx="-20" cy="4" rx="18" ry="9"/>
+    </g>
+    <g class="cloud3" transform="translate(500,35)">
+      <ellipse cx="0" cy="0" rx="26" ry="10"/>
+      <ellipse cx="18" cy="-4" rx="16" ry="8"/>
+    </g>
+  </g>
+
+  <!-- nubes medias -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <g class="cloud1" transform="translate(0,90)">
+      <ellipse cx="0" cy="0" rx="45" ry="18"/>
+      <ellipse cx="35" cy="-8" rx="30" ry="15"/>
+      <ellipse cx="-32" cy="6" rx="26" ry="13"/>
+      <ellipse cx="10" cy="10" rx="34" ry="12"/>
+    </g>
+    <g class="cloud1" transform="translate(650,70)">
+      <ellipse cx="0" cy="0" rx="38" ry="15"/>
+      <ellipse cx="28" cy="-6" rx="24" ry="12"/>
+      <ellipse cx="-24" cy="5" rx="20" ry="10"/>
+    </g>
+  </g>
+
+  <!-- nubes cercanas, mas grandes, mas abajo -->
+  <g fill="#FFFFFF" opacity="0.9">
+    <g class="cloud2" transform="translate(150,150)">
+      <ellipse cx="0" cy="0" rx="55" ry="20"/>
+      <ellipse cx="40" cy="-10" rx="34" ry="17"/>
+      <ellipse cx="-38" cy="8" rx="30" ry="15"/>
+      <ellipse cx="8" cy="12" rx="40" ry="14"/>
+    </g>
+    <g class="cloud2" transform="translate(780,175)">
+      <ellipse cx="0" cy="0" rx="48" ry="18"/>
+      <ellipse cx="34" cy="-8" rx="28" ry="14"/>
+      <ellipse cx="-30" cy="6" rx="24" ry="12"/>
+    </g>
+  </g>
+
+  <!-- pajaros -->
+  <g stroke="#5B4A2F" stroke-width="1.6" fill="none" opacity="0.6" class="birds">
+    <path d="M120 70 q6 -8 12 0 q6 -8 12 0"/>
+    <path d="M150 60 q5 -7 10 0 q5 -7 10 0"/>
+    <path d="M100 85 q5 -7 10 0 q5 -7 10 0"/>
+  </g>
+
+  <!-- destellos ambientales sutiles -->
+  <g fill="#FFF3D6">
+    <circle cx="200" cy="30" r="2" class="sparkle-a"/>
+    <circle cx="900" cy="40" r="2" class="sparkle-b"/>
+    <circle cx="1150" cy="90" r="1.6" class="sparkle-a"/>
+    <circle cx="60" cy="140" r="1.6" class="sparkle-b"/>
+  </g>
+
+  <!-- sol con glow -->
+  <circle cx="1000" cy="75" r="75" fill="url(#sunGlow)" class="sunPulse"/>
+  <circle cx="1000" cy="75" r="30" fill="#FFD166"/>
+  <circle cx="1000" cy="75" r="30" fill="none" stroke="#FFE9B0" stroke-width="2" opacity="0.7"/>
+
+  <!-- animated typing text -->
+  <g text-anchor="middle">
+    <g class="typeLine1d">
+      <text x="600" y="165" class="line1d">Joaquin Uriona</text>
+    </g>
+    <g class="typeLine2d">
+      <text x="600" y="200" class="line2d">BACKEND DEVELOPER</text>
+    </g>
+  </g>
+</svg>
