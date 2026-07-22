@@ -6,9 +6,11 @@
   - Joaquín
 -->
 
-<div align="center">
-  <img src="./assets/banner-top.svg" width="100%" alt="Joaquin Uriona, Backend Developer Jr., especializado en Java Spring Boot y .NET"/>
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-top.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-top-light.svg">
+  <img alt="Joaquin Uriona, Backend Developer Jr." src="./assets/banner-top.svg" width="100%">
+</picture>
 
 <div align="center">
 
