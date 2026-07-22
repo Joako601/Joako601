@@ -16,7 +16,15 @@ jobs:
 
       - name: Update date in README
         run: |
-          NEW_DATE=$(date +"%d de %B de %Y")
+          MONTH_NUM=$(date +"%m")
+          DAY=$(date +"%d")
+          YEAR=$(date +"%Y")
+          declare -A MESES=(
+            ["01"]="enero" ["02"]="febrero" ["03"]="marzo" ["04"]="abril"
+            ["05"]="mayo" ["06"]="junio" ["07"]="julio" ["08"]="agosto"
+            ["09"]="septiembre" ["10"]="octubre" ["11"]="noviembre" ["12"]="diciembre"
+          )
+          NEW_DATE="${DAY} de ${MESES[$MONTH_NUM]} de ${YEAR}"
           sed -i "s/Última actualización: .*/Última actualización: ${NEW_DATE}<\/sub>/" README.md
 
       - name: Commit changes
@@ -25,5 +33,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git diff --quiet && exit 0
           git add README.md
-          git commit -m " Actualizar fecha automáticamente"
+          git commit -m "🤖 Actualizar fecha automáticamente"
           git push
