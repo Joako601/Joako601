@@ -213,9 +213,11 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 
 ---
 
-<div align="center">
-  <img src="./assets/banner-bottom.svg" width="100%" alt="Cierre de perfil, skyline nocturno con Obelisco de Buenos Aires y pirámide mesoamericana"/>
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-bottom.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-bottom-light.svg">
+  <img alt="Cierre de perfil" src="./assets/banner-bottom.svg" width="100%">
+</picture>
 
 <div align="center">
   <sub>Gracias por tu interés en mi perfil.</sub>
