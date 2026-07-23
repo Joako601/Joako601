@@ -175,6 +175,13 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <img src="https://img.shields.io/badge/JesusUc18-0d0221?style=flat-square&color=0d0221" />
 </a>
 </td>
+<td align="center">
+<a href="https://github.com/AriffMedina">
+<img src="./assets/avatar-ariffmedina.svg" width="90"/>
+<br/>
+<img src="https://img.shields.io/badge/AriffMedina-0d0221?style=flat-square&color=0d0221" />
+</a>
+</td>
 </tr>
 </table>
 
