@@ -192,6 +192,11 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <table align="center">
 <tr>
 <td align="center" width="25%">
+<a href="https://www.credly.com/badges/0e4d9f5f-4c1f-40be-8422-ff31b91d862b/linked_in_profile">
+<img src="https://images.credly.com/images/7b3f119b-ada8-4ff6-817a-f2a8bbb7fe97/blob" width="160" alt="AWS Academy Graduate - Cloud Web Application Builder - Training Badge"/>
+</a>
+</td>
+<td align="center" width="25%">
 <a href="https://www.credly.com/badges/0a8ca206-bcbe-41a9-b6ae-d0517f77b1e7/linked_in_profile">
 <img src="https://images.credly.com/images/07e7ba52-aea4-431f-ba2d-a4113efd1d5a/blob" width="160" alt="AWS Academy Graduate - Cloud Operations - Training Badge"/>
 </a>
