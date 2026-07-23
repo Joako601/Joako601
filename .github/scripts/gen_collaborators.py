@@ -108,88 +108,104 @@ def escape_xml_text(text):
     )
 
 
-def make_styled_svg(login, avatar_bytes, size=90):
+def make_avatar_group(login, avatar_bytes, x, size=90, uid=""):
     """
-    Genera un .svg con:
-    - avatar circular embebido en base64
-    - borde tipo "loading spinner" (arco punteado que gira sin parar)
-    - nombre del colaborador debajo, con color oscilando entre naranja y violeta
-
-    Todo animado vía SMIL (<animate>/<animateTransform>), que SI funciona
-    dentro de un <img src="..."> en GitHub (a diferencia de :hover en CSS,
-    que no dispara porque el navegador no propaga eventos de mouse dentro
-    de una etiqueta <img>).
+    Genera un <g> (grupo SVG) con: avatar circular + borde spinner animado +
+    nombre con color oscilante. Pensado para insertarse dentro de un SVG más
+    grande (el marquee), por eso usa <g transform="translate(x,0)"> en vez
+    de ser un <svg> independiente. `uid` evita colisiones de id cuando el
+    mismo colaborador aparece duplicado (para el loop infinito del marquee).
     """
     b64 = base64.b64encode(avatar_bytes).decode("utf-8")
     data_uri = f"data:image/png;base64,{b64}"
     cx = cy = size / 2
     r_avatar = size / 2 - 4
     r_spinner = size / 2 - 1
-    text_y = size + 22
+    text_y = size + 20
     safe_login = escape_xml_text(login)
+    clip_id = f"clip-{login}-{uid}"
 
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{size}" height="{size + 34}" viewBox="0 0 {size} {size + 34}">
-  <defs>
-    <clipPath id="clip-{login}">
-      <circle cx="{cx}" cy="{cy}" r="{r_avatar - 3}"/>
-    </clipPath>
-  </defs>
-
-  <!-- fondo circular -->
-  <circle cx="{cx}" cy="{cy}" r="{r_avatar}" fill="#0d0221"/>
-
-  <!-- avatar -->
-  <image href="{data_uri}" xlink:href="{data_uri}" x="4" y="4" width="{size - 8}" height="{size - 8}" clip-path="url(#clip-{login})"/>
-
-  <!-- borde tipo loading spinner: arco punteado que gira en loop -->
-  <circle cx="{cx}" cy="{cy}" r="{r_spinner}" fill="none" stroke="#F2A93B"
-          stroke-width="2.5" stroke-linecap="round"
-          stroke-dasharray="{r_spinner * 2.5} {r_spinner * 3.8}">
-    <animateTransform attributeName="transform" type="rotate"
-                       from="0 {cx} {cy}" to="360 {cx} {cy}"
-                       dur="3s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- nombre: color oscilando entre naranja y violeta -->
-  <text x="{cx}" y="{text_y}" text-anchor="middle" font-family="monospace"
-        font-size="13" font-weight="bold" fill="#F2A93B">
-    {safe_login}
-    <animate attributeName="fill" values="#F2A93B;#B084F2;#F2A93B"
-             dur="3s" repeatCount="indefinite"/>
-  </text>
-</svg>'''
-    return svg
+    return f'''<g transform="translate({x},0)">
+    <defs>
+      <clipPath id="{clip_id}">
+        <circle cx="{cx}" cy="{cy}" r="{r_avatar - 3}"/>
+      </clipPath>
+    </defs>
+    <circle cx="{cx}" cy="{cy}" r="{r_avatar}" fill="#0d0221"/>
+    <image href="{data_uri}" xlink:href="{data_uri}" x="4" y="4" width="{size - 8}" height="{size - 8}" clip-path="url(#{clip_id})"/>
+    <circle cx="{cx}" cy="{cy}" r="{r_spinner}" fill="none" stroke="#F2A93B"
+            stroke-width="2.5" stroke-linecap="round"
+            stroke-dasharray="{r_spinner * 2.5} {r_spinner * 3.8}">
+      <animateTransform attributeName="transform" type="rotate"
+                         from="0 {cx} {cy}" to="360 {cx} {cy}"
+                         dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="{cx}" y="{text_y}" text-anchor="middle" font-family="monospace"
+          font-size="11" font-weight="bold" fill="#F2A93B">{safe_login}
+      <animate attributeName="fill" values="#F2A93B;#B084F2;#F2A93B"
+               dur="3s" repeatCount="indefinite"/>
+    </text>
+  </g>'''
 
 
-def build_table(collaborators):
-    cells = []
-    for c in collaborators:
+def build_marquee_svg(collaborators, avatar_bytes_map, size=90, gap=40,
+                      speed_px_per_sec=45, viewport_width=700):
+    """
+    Arma un SVG único con todos los colaboradores en fila, duplicados una
+    vez para que el desplazamiento sea un loop perfecto (sin salto visible),
+    y los anima deslizándose de derecha a izquierda sin parar.
+    """
+    step = size + gap
+    seq_width = len(collaborators) * step
+    height = size + 32
+
+    groups = []
+    for i, c in enumerate(collaborators):
         login = c["login"]
-        cell = f'''<td align="center">
-<a href="https://github.com/{login}">
-<img src="./{ASSETS_DIR}/avatar-{login.lower()}.svg" width="90"/>
-</a>
-</td>'''
-        cells.append(cell)
+        groups.append(make_avatar_group(login, avatar_bytes_map[login], i * step, size=size, uid="a"))
+    for i, c in enumerate(collaborators):
+        login = c["login"]
+        groups.append(make_avatar_group(login, avatar_bytes_map[login], seq_width + i * step, size=size, uid="b"))
 
-    # 4 por fila
-    rows = []
-    for i in range(0, len(cells), 4):
-        rows.append("<tr>\n" + "\n".join(cells[i:i + 4]) + "\n</tr>")
+    duration = max(seq_width / speed_px_per_sec, 4)
 
-    return '<table align="center">\n' + "\n".join(rows) + "\n</table>"
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="{viewport_width}" height="{height}" viewBox="0 0 {viewport_width} {height}">
+  <clipPath id="marquee-viewport">
+    <rect x="0" y="0" width="{viewport_width}" height="{height}"/>
+  </clipPath>
+  <g clip-path="url(#marquee-viewport)">
+    <g>
+      {"".join(groups)}
+      <animateTransform attributeName="transform" type="translate"
+                         from="0 0" to="{-seq_width} 0"
+                         dur="{duration}s" repeatCount="indefinite" calcMode="linear"/>
+    </g>
+  </g>
+</svg>'''
 
 
-def update_readme(table_html):
+def build_marquee_block():
+    return (
+        '<div align="center">\n'
+        f'<img src="./{ASSETS_DIR}/collaborators-marquee.svg" alt="Colaboradores" width="100%"/>\n'
+        "</div>"
+    )
+
+
+def update_readme(block_html):
     with open(README_PATH, "r", encoding="utf-8") as f:
         readme = f.read()
 
-    pattern = r'(## ⏾ Con quién colaboré\s*\n\s*)<table align="center">.*?</table>'
+    # Matchea todo lo que haya entre el header de la sección y el próximo
+    # separador "---", sea la tabla vieja de avatares sueltos o el div del
+    # marquee ya generado en una corrida anterior.
+    pattern = r'(## ⏾ Con quién colaboré\s*\n\s*).*?(\n\s*---)'
     if not re.search(pattern, readme, flags=re.DOTALL):
-        print("[WARN] No se encontró la sección '## ⏾ Con quién colaboré' con el formato esperado en README.md")
+        print("[WARN] No se encontró la sección '## ⏾ Con quién colaboré' en README.md")
         return
 
-    readme_new = re.sub(pattern, r"\1" + table_html, readme, flags=re.DOTALL)
+    readme_new = re.sub(pattern, r"\1" + block_html + r"\2", readme, flags=re.DOTALL)
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(readme_new)
@@ -205,6 +221,8 @@ def main():
         print("[WARN] No se detectaron colaboradores. No se actualiza el README.")
         return
 
+    avatar_bytes_map = {}
+    valid_collaborators = []
     for c in collaborators:
         login = c["login"]
         avatar_url = c.get("avatar_url")
@@ -217,14 +235,22 @@ def main():
         except requests.RequestException as e:
             print(f"[WARN] No se pudo descargar el avatar de {login}: {e}")
             continue
-        svg = make_styled_svg(login, img_resp.content)
-        svg_path = os.path.join(ASSETS_DIR, f"avatar-{login.lower()}.svg")
-        with open(svg_path, "w", encoding="utf-8") as f:
-            f.write(svg)
-        print(f"[INFO] Avatar generado: {svg_path}")
+        avatar_bytes_map[login] = img_resp.content
+        valid_collaborators.append(c)
+        print(f"[INFO] Avatar descargado: {login}")
 
-    table_html = build_table(collaborators)
-    update_readme(table_html)
+    if not valid_collaborators:
+        print("[WARN] Ningún avatar se pudo descargar. No se actualiza el README.")
+        return
+
+    marquee_svg = build_marquee_svg(valid_collaborators, avatar_bytes_map)
+    marquee_path = os.path.join(ASSETS_DIR, "collaborators-marquee.svg")
+    with open(marquee_path, "w", encoding="utf-8") as f:
+        f.write(marquee_svg)
+    print(f"[INFO] Marquee generado: {marquee_path}")
+
+    block_html = build_marquee_block()
+    update_readme(block_html)
     print("README actualizado.")
 
 
