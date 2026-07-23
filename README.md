@@ -152,37 +152,9 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 
 ## ⏾ Con quién colaboré
 
-<table align="center">
-<tr>
-<td align="center">
-<a href="https://github.com/Fernando-Castro-Hernandez">
-<img src="./assets/avatar-fernando-castro-hernandez.svg" width="90"/>
-</a>
-</td>
-<td align="center">
-<a href="https://github.com/Eacvellano">
-<img src="./assets/avatar-eacvellano.svg" width="90"/>
-</a>
-</td>
-<td align="center">
-<a href="https://github.com/JesusUc18">
-<img src="./assets/avatar-jesusuc18.svg" width="90"/>
-</a>
-</td>
-<td align="center">
-<a href="https://github.com/AriffMedina">
-<img src="./assets/avatar-ariffmedina.svg" width="90"/>
-</a>
-</td>
-</tr>
-<tr>
-<td align="center">
-<a href="https://github.com/mateomartin21">
-<img src="./assets/avatar-mateomartin21.svg" width="90"/>
-</a>
-</td>
-</tr>
-</table>
+<div align="center">
+<img src="./assets/collaborators-marquee.svg" alt="Colaboradores" width="100%"/>
+</div>
 
 ---
 
