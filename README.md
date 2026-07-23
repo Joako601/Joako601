@@ -219,6 +219,6 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
   <br/>
   <sub><i>Joako601</i></sub>
   <br/>
-  <sub>Última actualización: 22 de julio de 2026</sub>
+  <sub>Última actualización: 23 de julio de 2026</sub>
 </div>
 
