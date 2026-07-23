@@ -157,29 +157,28 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <td align="center">
 <a href="https://github.com/Fernando-Castro-Hernandez">
 <img src="./assets/avatar-fernando-castro-hernandez.svg" width="90"/>
-<br/>
-<img src="https://img.shields.io/badge/Fernando--Castro--Hernandez-0d0221?style=flat-square&color=0d0221" />
 </a>
 </td>
 <td align="center">
 <a href="https://github.com/Eacvellano">
 <img src="./assets/avatar-eacvellano.svg" width="90"/>
-<br/>
-<img src="https://img.shields.io/badge/Eacvellano-0d0221?style=flat-square&color=0d0221" />
 </a>
 </td>
 <td align="center">
 <a href="https://github.com/JesusUc18">
 <img src="./assets/avatar-jesusuc18.svg" width="90"/>
-<br/>
-<img src="https://img.shields.io/badge/JesusUc18-0d0221?style=flat-square&color=0d0221" />
 </a>
 </td>
 <td align="center">
 <a href="https://github.com/AriffMedina">
 <img src="./assets/avatar-ariffmedina.svg" width="90"/>
-<br/>
-<img src="https://img.shields.io/badge/AriffMedina-0d0221?style=flat-square&color=0d0221" />
+</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://github.com/mateomartin21">
+<img src="./assets/avatar-mateomartin21.svg" width="90"/>
 </a>
 </td>
 </tr>
