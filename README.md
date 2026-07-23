@@ -162,13 +162,6 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 </a>
 </td>
 <td align="center">
-<a href="https://github.com/NeasakaSolutions">
-<img src="./assets/avatar-neasakasolutions.svg" width="90"/>
-<br/>
-<img src="https://img.shields.io/badge/NeasakaSolutions-0d0221?style=flat-square&color=0d0221" />
-</a>
-</td>
-<td align="center">
 <a href="https://github.com/Eacvellano">
 <img src="./assets/avatar-eacvellano.svg" width="90"/>
 <br/>
