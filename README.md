@@ -158,7 +158,7 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <a href="https://github.com/Fernando-Castro-Hernandez">
 <img src="./assets/avatar-fernando-castro-hernandez.svg" width="90"/>
 <br/>
-<img src="https://img.shields.io/badge/Fernando-Castro-Hernandez-0d0221?style=flat-square&color=0d0221" />
+<img src="https://img.shields.io/badge/Fernando--Castro--Hernandez-0d0221?style=flat-square&color=0d0221" />
 </a>
 </td>
 <td align="center">
