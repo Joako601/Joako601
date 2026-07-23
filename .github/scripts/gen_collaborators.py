@@ -1,38 +1,165 @@
-name: Update Collaborators
+"""
+gen_collaborators.py
 
-on:
-  schedule:
-    - cron: "0 6 * * 1"   # todos los lunes 6am UTC
-  workflow_dispatch: {}
+Detecta colaboradores reales (contributors) de todos tus repos públicos,
+descarga su avatar de GitHub, lo convierte a un .svg circular con el
+mismo estilo visual del README (fondo #0d0221, borde #F2A93B), y
+actualiza la sección "## ⏾ Con quién colaboré" del README.md.
 
-permissions:
-  contents: write
+Requiere la variable de entorno GITHUB_TOKEN (el workflow ya la provee
+automáticamente vía secrets.GITHUB_TOKEN) y GITHUB_USERNAME.
+"""
 
-jobs:
-  update-collaborators:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+import os
+import re
+import base64
+import requests
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "Joako601")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
+API_BASE = "https://api.github.com"
+ASSETS_DIR = "assets"
+README_PATH = "README.md"
 
-      - name: Install dependencies
-        run: pip install requests
+HEADERS = {
+    "Accept": "application/vnd.github+json",
+    "Authorization": f"Bearer {GITHUB_TOKEN}" if GITHUB_TOKEN else "",
+}
 
-      - name: Run collaborators script
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USERNAME: Joako601
-        run: python .github/scripts/gen_collaborators.py
+# Cuentas a ignorar siempre (bots, la tuya propia, etc.)
+IGNORE_LOGINS = {
+    GITHUB_USERNAME.lower(),
+    "dependabot[bot]",
+    "github-actions[bot]",
+}
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/avatar-*.svg
-          git diff --cached --quiet || git commit -m "chore: actualizar colaboradores automáticamente"
-          git push
+
+def get_all_repos():
+    """Trae todos los repos públicos donde participaste (propios + donde contribuiste)."""
+    repos = []
+    page = 1
+    while True:
+        r = requests.get(
+            f"{API_BASE}/users/{GITHUB_USERNAME}/repos",
+            headers=HEADERS,
+            params={"per_page": 100, "page": page, "type": "owner"},
+        )
+        r.raise_for_status()
+        batch = r.json()
+        if not batch:
+            break
+        repos.extend(batch)
+        page += 1
+    return repos
+
+
+def get_contributors(owner, repo):
+    """Trae contributors reales de un repo (excluye forks vacíos y bots)."""
+    contributors = []
+    page = 1
+    while True:
+        r = requests.get(
+            f"{API_BASE}/repos/{owner}/{repo}/contributors",
+            headers=HEADERS,
+            params={"per_page": 100, "page": page, "anon": "false"},
+        )
+        if r.status_code != 200:
+            break
+        batch = r.json()
+        if not batch:
+            break
+        contributors.extend(batch)
+        page += 1
+    return contributors
+
+
+def collect_collaborators():
+    """Recorre todos los repos y arma un set único de colaboradores reales."""
+    seen = {}
+    for repo in get_all_repos():
+        if repo.get("fork"):
+            continue
+        owner = repo["owner"]["login"]
+        name = repo["name"]
+        for c in get_contributors(owner, name):
+            login = c.get("login", "")
+            if not login or login.lower() in IGNORE_LOGINS:
+                continue
+            # nos quedamos con el que más contribuciones tenga si se repite
+            if login not in seen or c.get("contributions", 0) > seen[login].get("contributions", 0):
+                seen[login] = c
+    return list(seen.values())
+
+
+def make_styled_svg(login, avatar_bytes, size=90):
+    """Genera un .svg circular con el avatar embebido en base64, estilo README."""
+    b64 = base64.b64encode(avatar_bytes).decode("utf-8")
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{size}" height="{size}" viewBox="0 0 {size} {size}">
+  <defs>
+    <clipPath id="clip-{login}">
+      <circle cx="{size/2}" cy="{size/2}" r="{size/2 - 4}"/>
+    </clipPath>
+  </defs>
+  <circle cx="{size/2}" cy="{size/2}" r="{size/2 - 1}" fill="#0d0221" stroke="#F2A93B" stroke-width="2.5"/>
+  <image href="data:image/png;base64,{b64}" x="4" y="4" width="{size-8}" height="{size-8}" clip-path="url(#clip-{login})"/>
+</svg>'''
+    return svg
+
+
+def build_table(collaborators):
+    cells = []
+    for c in collaborators:
+        login = c["login"]
+        cell = f'''<td align="center">
+<a href="https://github.com/{login}">
+<img src="./{ASSETS_DIR}/avatar-{login.lower()}.svg" width="90"/>
+<br/>
+<img src="https://img.shields.io/badge/{login}-0d0221?style=flat-square&color=0d0221" />
+</a>
+</td>'''
+        cells.append(cell)
+
+    # 4 por fila
+    rows = []
+    for i in range(0, len(cells), 4):
+        rows.append("<tr>\n" + "\n".join(cells[i:i + 4]) + "\n</tr>")
+
+    return '<table align="center">\n' + "\n".join(rows) + "\n</table>"
+
+
+def update_readme(table_html):
+    with open(README_PATH, "r", encoding="utf-8") as f:
+        readme = f.read()
+
+    pattern = r'(## ⏾ Con quién colaboré\s*\n\s*)<table align="center">.*?</table>'
+    readme_new = re.sub(pattern, r"\1" + table_html, readme, flags=re.DOTALL)
+
+    with open(README_PATH, "w", encoding="utf-8") as f:
+        f.write(readme_new)
+
+
+def main():
+    os.makedirs(ASSETS_DIR, exist_ok=True)
+
+    collaborators = collect_collaborators()
+    print(f"Colaboradores detectados: {[c['login'] for c in collaborators]}")
+
+    for c in collaborators:
+        login = c["login"]
+        avatar_url = c.get("avatar_url")
+        if not avatar_url:
+            continue
+        img_resp = requests.get(avatar_url)
+        img_resp.raise_for_status()
+        svg = make_styled_svg(login, img_resp.content)
+        svg_path = os.path.join(ASSETS_DIR, f"avatar-{login.lower()}.svg")
+        with open(svg_path, "w", encoding="utf-8") as f:
+            f.write(svg)
+
+    table_html = build_table(collaborators)
+    update_readme(table_html)
+    print("README actualizado.")
+
+
+if __name__ == "__main__":
+    main()
