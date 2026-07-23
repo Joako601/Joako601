@@ -113,21 +113,23 @@ def make_styled_svg(login, avatar_bytes, size=90):
     return svg
 
 
-def escape_shield_label(text):
-    """Escapa caracteres reservados por shields.io en el texto de un badge."""
-    return text.replace("-", "--").replace("_", "__").replace(" ", "%20")
+from urllib.parse import quote
 
 
 def build_table(collaborators):
     cells = []
     for c in collaborators:
         login = c["login"]
-        badge_label = escape_shield_label(login)
+        encoded_login = quote(login, safe="")
+        badge_url = (
+            f"https://img.shields.io/static/v1?"
+            f"label=&message={encoded_login}&color=0d0221&style=flat-square"
+        )
         cell = f'''<td align="center">
 <a href="https://github.com/{login}">
 <img src="./{ASSETS_DIR}/avatar-{login.lower()}.svg" width="90"/>
 <br/>
-<img src="https://img.shields.io/badge/{badge_label}-0d0221?style=flat-square&color=0d0221" />
+<img src="{badge_url}" />
 </a>
 </td>'''
         cells.append(cell)
