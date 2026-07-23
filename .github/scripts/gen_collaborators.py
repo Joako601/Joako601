@@ -97,39 +97,77 @@ def collect_collaborators():
     return list(seen.values())
 
 
+def escape_xml_text(text):
+    """Escapa caracteres reservados de XML para usar el login como texto SVG."""
+    return (
+        text.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&apos;")
+    )
+
+
 def make_styled_svg(login, avatar_bytes, size=90):
-    """Genera un .svg circular con el avatar embebido en base64, estilo README."""
+    """
+    Genera un .svg con:
+    - avatar circular embebido en base64
+    - borde tipo "loading spinner" (arco punteado que gira sin parar)
+    - nombre del colaborador debajo, con color oscilando entre naranja y violeta
+
+    Todo animado vía SMIL (<animate>/<animateTransform>), que SI funciona
+    dentro de un <img src="..."> en GitHub (a diferencia de :hover en CSS,
+    que no dispara porque el navegador no propaga eventos de mouse dentro
+    de una etiqueta <img>).
+    """
     b64 = base64.b64encode(avatar_bytes).decode("utf-8")
     data_uri = f"data:image/png;base64,{b64}"
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{size}" height="{size}" viewBox="0 0 {size} {size}">
+    cx = cy = size / 2
+    r_avatar = size / 2 - 4
+    r_spinner = size / 2 - 1
+    text_y = size + 22
+    safe_login = escape_xml_text(login)
+
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{size}" height="{size + 34}" viewBox="0 0 {size} {size + 34}">
   <defs>
     <clipPath id="clip-{login}">
-      <circle cx="{size/2}" cy="{size/2}" r="{size/2 - 4}"/>
+      <circle cx="{cx}" cy="{cy}" r="{r_avatar - 3}"/>
     </clipPath>
   </defs>
-  <circle cx="{size/2}" cy="{size/2}" r="{size/2 - 1}" fill="#0d0221" stroke="#F2A93B" stroke-width="2.5"/>
-  <image href="{data_uri}" xlink:href="{data_uri}" x="4" y="4" width="{size-8}" height="{size-8}" clip-path="url(#clip-{login})"/>
+
+  <!-- fondo circular -->
+  <circle cx="{cx}" cy="{cy}" r="{r_avatar}" fill="#0d0221"/>
+
+  <!-- avatar -->
+  <image href="{data_uri}" xlink:href="{data_uri}" x="4" y="4" width="{size - 8}" height="{size - 8}" clip-path="url(#clip-{login})"/>
+
+  <!-- borde tipo loading spinner: arco punteado que gira en loop -->
+  <circle cx="{cx}" cy="{cy}" r="{r_spinner}" fill="none" stroke="#F2A93B"
+          stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="{r_spinner * 2.5} {r_spinner * 3.8}">
+    <animateTransform attributeName="transform" type="rotate"
+                       from="0 {cx} {cy}" to="360 {cx} {cy}"
+                       dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- nombre: color oscilando entre naranja y violeta -->
+  <text x="{cx}" y="{text_y}" text-anchor="middle" font-family="monospace"
+        font-size="13" font-weight="bold" fill="#F2A93B">
+    {safe_login}
+    <animate attributeName="fill" values="#F2A93B;#B084F2;#F2A93B"
+             dur="3s" repeatCount="indefinite"/>
+  </text>
 </svg>'''
     return svg
-
-
-from urllib.parse import quote
 
 
 def build_table(collaborators):
     cells = []
     for c in collaborators:
         login = c["login"]
-        encoded_login = quote(login, safe="")
-        badge_url = (
-            f"https://img.shields.io/static/v1?"
-            f"label=&message={encoded_login}&color=0d0221&style=flat-square"
-        )
         cell = f'''<td align="center">
 <a href="https://github.com/{login}">
 <img src="./{ASSETS_DIR}/avatar-{login.lower()}.svg" width="90"/>
-<br/>
-<img src="{badge_url}" />
 </a>
 </td>'''
         cells.append(cell)
