@@ -163,6 +163,11 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <table align="center">
 <tr>
 <td align="center" width="25%">
+<a href="https://www.credly.com/badges/06e13122-840b-490b-bc1c-9ab8490b62c6/linked_in_profile">
+<img src="https://images.credly.com/images/bb3211c0-a562-44ec-a8b5-df54deb0e5e9/blob" width="160" alt="AWS Academy Graduate - Cloud Developing - Training Badge"/>
+</a>
+</td>
+<td align="center" width="25%">
 <a href="https://www.credly.com/badges/0e4d9f5f-4c1f-40be-8422-ff31b91d862b/linked_in_profile">
 <img src="https://images.credly.com/images/7b3f119b-ada8-4ff6-817a-f2a8bbb7fe97/blob" width="160" alt="AWS Academy Graduate - Cloud Web Application Builder - Training Badge"/>
 </a>
@@ -175,6 +180,11 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <td align="center" width="25%">
 <a href="https://www.credly.com/badges/de499ea0-8d96-4c70-9206-1453670307ad/linked_in_profile">
 <img src="https://images.credly.com/images/e3541a0c-dd4a-4820-8052-5001006efc85/blob" width="160" alt="AWS Academy Graduate - Cloud Foundations - Training Badge"/>
+</a>
+</td>
+<td align="center" width="25%">
+<a href="https://www.credly.com/badges/77c91744-2d9a-4ef0-a71f-0288d3142541/linked_in_profile">
+<img src="https://images.credly.com/images/082c8d0c-5232-4597-b6c4-6bebcc4f3046/blob" width="160" alt="AI Skills Fest 2026"/>
 </a>
 </td>
 <td align="center" width="25%">
