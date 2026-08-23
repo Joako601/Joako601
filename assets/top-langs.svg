@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="286"
+     viewBox="0 0 450 286">
+  <rect x="0.5" y="0.5" width="449" height="285" rx="10"
+        fill="#0d0221" stroke="#F2A93B" stroke-opacity="0.4"/>
+  <text x="24" y="34" font-family="monospace" font-size="16" font-weight="bold" fill="#F2A93B">
+    Lenguajes más usados
+  </text>
+  
+    <text x="24" y="62" font-family="monospace" font-size="13" fill="#e6e6e6">HTML</text>
+    <text x="426" y="62" font-family="monospace" font-size="13"
+          text-anchor="end" fill="#e6e6e6">43.2%</text>
+    <rect x="24" y="70" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+    <rect x="24" y="70" width="173.8" height="6" rx="3" fill="#e34c26"/>
+    <text x="24" y="96" font-family="monospace" font-size="13" fill="#e6e6e6">C#</text>
+    <text x="426" y="96" font-family="monospace" font-size="13"
+          text-anchor="end" fill="#e6e6e6">28.0%</text>
+    <rect x="24" y="104" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+    <rect x="24" y="104" width="112.7" height="6" rx="3" fill="#178600"/>
+    <text x="24" y="130" font-family="monospace" font-size="13" fill="#e6e6e6">CSS</text>
+    <text x="426" y="130" font-family="monospace" font-size="13"
+          text-anchor="end" fill="#e6e6e6">13.3%</text>
+    <rect x="24" y="138" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+    <rect x="24" y="138" width="53.4" height="6" rx="3" fill="#563d7c"/>
+    <text x="24" y="164" font-family="monospace" font-size="13" fill="#e6e6e6">Java</text>
+    <text x="426" y="164" font-family="monospace" font-size="13"
+          text-anchor="end" fill="#e6e6e6">7.4%</text>
+    <rect x="24" y="172" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+    <rect x="24" y="172" width="29.9" height="6" rx="3" fill="#b07219"/>
+    <text x="24" y="198" font-family="monospace" font-size="13" fill="#e6e6e6">JavaScript</text>
+    <text x="426" y="198" font-family="monospace" font-size="13"
+          text-anchor="end" fill="#e6e6e6">4.6%</text>
+    <rect x="24" y="206" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+    <rect x="24" y="206" width="18.4" height="6" rx="3" fill="#f1e05a"/>
+    <text x="24" y="232" font-family="monospace" font-size="13" fill="#e6e6e6">GDScript</text>
+    <text x="426" y="232" font-family="monospace" font-size="13"
+          text-anchor="end" fill="#e6e6e6">3.4%</text>
+    <rect x="24" y="240" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+    <rect x="24" y="240" width="13.8" height="6" rx="3" fill="#B084F2"/>
+</svg>

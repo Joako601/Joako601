@@ -1,0 +1,38 @@
+name: Update Dev Stats
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   # todos los días 7am UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-dev-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run dev stats script
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_STATS || secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: Joako601
+        run: python .github/scripts/gen_dev_stats.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/stats-card.svg assets/top-langs.svg assets/activity-graph.svg
+          git diff --cached --quiet || git commit -m "🤖 Actualizar estadísticas de desarrollo"
+          git push

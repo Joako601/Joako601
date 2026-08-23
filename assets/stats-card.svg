@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="286"
+     viewBox="0 0 450 286">
+  <rect x="0.5" y="0.5" width="449" height="285" rx="10"
+        fill="#0d0221" stroke="#F2A93B" stroke-opacity="0.4"/>
+  <text x="24" y="34" font-family="monospace" font-size="16" font-weight="bold" fill="#F2A93B">
+    Joako601's GitHub Stats
+  </text>
+  
+    <text x="24" y="62" font-family="monospace" font-size="14" fill="#e6e6e6">⟡ Repositorios públicos</text>
+    <text x="426" y="62" font-family="monospace" font-size="14" font-weight="bold"
+          text-anchor="end" fill="#F2A93B">24</text>
+    <text x="24" y="96" font-family="monospace" font-size="14" fill="#e6e6e6">⟡ Seguidores</text>
+    <text x="426" y="96" font-family="monospace" font-size="14" font-weight="bold"
+          text-anchor="end" fill="#F2A93B">10</text>
+    <text x="24" y="130" font-family="monospace" font-size="14" fill="#e6e6e6">⟡ Total de estrellas</text>
+    <text x="426" y="130" font-family="monospace" font-size="14" font-weight="bold"
+          text-anchor="end" fill="#F2A93B">3</text>
+    <text x="24" y="164" font-family="monospace" font-size="14" fill="#e6e6e6">⟡ Total de commits</text>
+    <text x="426" y="164" font-family="monospace" font-size="14" font-weight="bold"
+          text-anchor="end" fill="#F2A93B">414</text>
+    <text x="24" y="198" font-family="monospace" font-size="14" fill="#e6e6e6">⟡ Pull Requests</text>
+    <text x="426" y="198" font-family="monospace" font-size="14" font-weight="bold"
+          text-anchor="end" fill="#F2A93B">13</text>
+    <text x="24" y="232" font-family="monospace" font-size="14" fill="#e6e6e6">⟡ Issues</text>
+    <text x="426" y="232" font-family="monospace" font-size="14" font-weight="bold"
+          text-anchor="end" fill="#F2A93B">1</text>
+</svg>

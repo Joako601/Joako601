@@ -205,12 +205,12 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 ## ▣ Estadísticas de Desarrollo
 
 <div align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Joako601&show_icons=true&theme=radical&hide_border=true" width="48%" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Joako601&layout=compact&theme=radical&hide_border=true" width="48%" />
+  <img src="./assets/stats-card.svg" width="48%" alt="Estadísticas de GitHub"/>
+  <img src="./assets/top-langs.svg" width="48%" alt="Lenguajes más usados"/>
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Joako601&theme=react-dark&hide_border=true" width="97%" />
+  <img src="./assets/activity-graph.svg" width="97%" alt="Calendario de contribuciones"/>
 </div>
 
 ---
