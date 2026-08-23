@@ -1,39 +1,161 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="450" height="286"
      viewBox="0 0 450 286">
-  <rect x="0.5" y="0.5" width="449" height="285" rx="10"
-        fill="#0d0221" stroke="#F2A93B" stroke-opacity="0.4"/>
-  <text x="24" y="34" font-family="monospace" font-size="16" font-weight="bold" fill="#F2A93B">
-    Lenguajes más usados
-  </text>
+  <style>
+    text { font-family: 'Fira Code', ui-monospace, Menlo, Consolas, monospace; }
+    .title { font-size: 16px; font-weight: 700; fill: #FCEFCB;
+              filter: drop-shadow(0 0 4px rgba(242,169,59,0.45)); }
+    .caption { font-size: 11px; fill: #6b6094; }
+    .label { font-size: 13px; fill: #d8cdf0; }
+    .value { font-size: 13px; font-weight: 700; fill: #F2A93B;
+              filter: drop-shadow(0 0 3px rgba(242,169,59,0.35)); }
+
+    .twinkle-a { animation: twinkle 2.5s ease-in-out infinite; }
+    .twinkle-b { animation: twinkle 3.2s ease-in-out infinite; }
+    .twinkle-c { animation: twinkle 4s ease-in-out infinite; }
+    @keyframes twinkle { 0%, 100% { opacity: .28; } 50% { opacity: 1; } }
+
+    .pulse { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box;
+              transform-origin: center; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+
+    .spin { animation: rot 3.2s linear infinite; transform-box: fill-box;
+             transform-origin: center; }
+    @keyframes rot { to { transform: rotate(360deg); } }
+
+    .reveal { opacity: 0; animation: fadeUp .6s ease-out forwards; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); }
+                          to { opacity: 1; transform: translateY(0); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .twinkle-a, .twinkle-b, .twinkle-c, .pulse, .spin { animation: none; }
+      .reveal { opacity: 1; animation: none; }
+      .type-wrap { animation: none !important; clip-path: none !important; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="langs-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0221"/>
+      <stop offset="100%" stop-color="#1a0a3d"/>
+    </linearGradient>
+    <radialGradient id="langs-glow" cx="12%" cy="10%" r="55%">
+      <stop offset="0%" stop-color="#F2A93B" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#F2A93B" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="langs-clip"><rect width="450" height="286" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#langs-clip)">
+    <rect width="450" height="286" fill="url(#langs-sky)"/>
+    <rect width="450" height="286" fill="url(#langs-glow)"/>
+    <g id="langs-bgstars"><circle cx="14" cy="261" r="1.0" fill="#FCEFCB" opacity="0.35" class="twinkle-a"/><circle cx="305" cy="206" r="1.3" fill="#F2A93B" opacity="0.35" class="twinkle-b"/><circle cx="428" cy="25" r="1.6" fill="#F2A93B" opacity="0.35" class="twinkle-c"/><circle cx="197" cy="208" r="1.0" fill="#F2A93B" opacity="0.35" class="twinkle-a"/><circle cx="104" cy="167" r="1.3" fill="#FCEFCB" opacity="0.35" class="twinkle-b"/><circle cx="125" cy="182" r="1.6" fill="#F2A93B" opacity="0.35" class="twinkle-c"/><circle cx="338" cy="183" r="1.0" fill="#F2A93B" opacity="0.35" class="twinkle-a"/><circle cx="377" cy="254" r="1.3" fill="#F2A93B" opacity="0.35" class="twinkle-b"/><circle cx="194" cy="241" r="1.6" fill="#FCEFCB" opacity="0.35" class="twinkle-c"/></g>
+  </g>
+  <rect x="0.5" y="0.5" width="449" height="285" rx="14"
+        fill="none" stroke="#F2A93B" stroke-opacity="0.35"/>
+  <g class="type-wrap" style="overflow:hidden;animation:type-langs 1s steps(20,end) 1 forwards">
+    <text x="24" y="34" class="title">Lenguajes más usados</text>
+  </g>
+  <style>@keyframes type-langs { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }</style>
+  <g transform="translate(420,24)"><title>Se actualiza automáticamente todos los días</title><circle r="7" fill="none" stroke="#B084F2" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="16 26" class="spin"/><circle r="1.6" fill="#B084F2"/></g>
   
-    <text x="24" y="62" font-family="monospace" font-size="13" fill="#e6e6e6">HTML</text>
-    <text x="426" y="62" font-family="monospace" font-size="13"
-          text-anchor="end" fill="#e6e6e6">43.2%</text>
-    <rect x="24" y="70" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
-    <rect x="24" y="70" width="173.8" height="6" rx="3" fill="#e34c26"/>
-    <text x="24" y="96" font-family="monospace" font-size="13" fill="#e6e6e6">C#</text>
-    <text x="426" y="96" font-family="monospace" font-size="13"
-          text-anchor="end" fill="#e6e6e6">28.0%</text>
-    <rect x="24" y="104" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
-    <rect x="24" y="104" width="112.7" height="6" rx="3" fill="#178600"/>
-    <text x="24" y="130" font-family="monospace" font-size="13" fill="#e6e6e6">CSS</text>
-    <text x="426" y="130" font-family="monospace" font-size="13"
-          text-anchor="end" fill="#e6e6e6">13.3%</text>
-    <rect x="24" y="138" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
-    <rect x="24" y="138" width="53.4" height="6" rx="3" fill="#563d7c"/>
-    <text x="24" y="164" font-family="monospace" font-size="13" fill="#e6e6e6">Java</text>
-    <text x="426" y="164" font-family="monospace" font-size="13"
-          text-anchor="end" fill="#e6e6e6">7.4%</text>
-    <rect x="24" y="172" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
-    <rect x="24" y="172" width="29.9" height="6" rx="3" fill="#b07219"/>
-    <text x="24" y="198" font-family="monospace" font-size="13" fill="#e6e6e6">JavaScript</text>
-    <text x="426" y="198" font-family="monospace" font-size="13"
-          text-anchor="end" fill="#e6e6e6">4.6%</text>
-    <rect x="24" y="206" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
-    <rect x="24" y="206" width="18.4" height="6" rx="3" fill="#f1e05a"/>
-    <text x="24" y="232" font-family="monospace" font-size="13" fill="#e6e6e6">GDScript</text>
-    <text x="426" y="232" font-family="monospace" font-size="13"
-          text-anchor="end" fill="#e6e6e6">3.4%</text>
-    <rect x="24" y="240" width="402" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
-    <rect x="24" y="240" width="13.8" height="6" rx="3" fill="#B084F2"/>
+    <g class="reveal" style="animation-delay:0.15s">
+      <g class=""><path d="M30 54.8 L31.0 58 L30 61.2 L29.0 58 Z" fill="#e34c26"/><path d="M26.8 58 L30 59.0 L33.2 58 L30 57.0 Z" fill="#e34c26"/></g>
+      <text x="42" y="62" class="label">HTML</text>
+      <text x="426" y="62" class="label" text-anchor="end">43.2%</text>
+      <rect x="42" y="70" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+      <rect x="42" y="70" width="0" height="6" rx="3" fill="#e34c26">
+        <animate attributeName="width" from="0" to="148.1" dur="0.9s"
+                 begin="0.30s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <circle r="2.4" fill="#ffffff" opacity="0">
+        <animateMotion path="M42 73 L190.1 73"
+                        dur="0.9s" begin="0.30s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
+                  dur="0.9s" begin="0.30s" fill="freeze"/>
+      </circle>
+    </g>
+    <g class="reveal" style="animation-delay:0.23s">
+      <g class=""><path d="M30 88.8 L31.0 92 L30 95.2 L29.0 92 Z" fill="#178600"/><path d="M26.8 92 L30 93.0 L33.2 92 L30 91.0 Z" fill="#178600"/></g>
+      <text x="42" y="96" class="label">C#</text>
+      <text x="426" y="96" class="label" text-anchor="end">28.0%</text>
+      <rect x="42" y="104" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+      <rect x="42" y="104" width="0" height="6" rx="3" fill="#178600">
+        <animate attributeName="width" from="0" to="89.6" dur="0.9s"
+                 begin="0.38s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <circle r="2.4" fill="#ffffff" opacity="0">
+        <animateMotion path="M42 107 L131.6 107"
+                        dur="0.9s" begin="0.38s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
+                  dur="0.9s" begin="0.38s" fill="freeze"/>
+      </circle>
+    </g>
+    <g class="reveal" style="animation-delay:0.31s">
+      <g class=""><path d="M30 122.8 L31.0 126 L30 129.2 L29.0 126 Z" fill="#563d7c"/><path d="M26.8 126 L30 127.0 L33.2 126 L30 125.0 Z" fill="#563d7c"/></g>
+      <text x="42" y="130" class="label">CSS</text>
+      <text x="426" y="130" class="label" text-anchor="end">13.3%</text>
+      <rect x="42" y="138" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+      <rect x="42" y="138" width="0" height="6" rx="3" fill="#563d7c">
+        <animate attributeName="width" from="0" to="33.0" dur="0.9s"
+                 begin="0.46s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <circle r="2.4" fill="#ffffff" opacity="0">
+        <animateMotion path="M42 141 L75.0 141"
+                        dur="0.9s" begin="0.46s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
+                  dur="0.9s" begin="0.46s" fill="freeze"/>
+      </circle>
+    </g>
+    <g class="reveal" style="animation-delay:0.39s">
+      <g class=""><path d="M30 156.8 L31.0 160 L30 163.2 L29.0 160 Z" fill="#b07219"/><path d="M26.8 160 L30 161.0 L33.2 160 L30 159.0 Z" fill="#b07219"/></g>
+      <text x="42" y="164" class="label">Java</text>
+      <text x="426" y="164" class="label" text-anchor="end">7.4%</text>
+      <rect x="42" y="172" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+      <rect x="42" y="172" width="0" height="6" rx="3" fill="#b07219">
+        <animate attributeName="width" from="0" to="10.6" dur="0.9s"
+                 begin="0.54s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <circle r="2.4" fill="#ffffff" opacity="0">
+        <animateMotion path="M42 175 L52.6 175"
+                        dur="0.9s" begin="0.54s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
+                  dur="0.9s" begin="0.54s" fill="freeze"/>
+      </circle>
+    </g>
+    <g class="reveal" style="animation-delay:0.47s">
+      <g class=""><path d="M30 190.8 L31.0 194 L30 197.2 L29.0 194 Z" fill="#f1e05a"/><path d="M26.8 194 L30 195.0 L33.2 194 L30 193.0 Z" fill="#f1e05a"/></g>
+      <text x="42" y="198" class="label">JavaScript</text>
+      <text x="426" y="198" class="label" text-anchor="end">4.6%</text>
+      <rect x="42" y="206" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+      <rect x="42" y="206" width="0" height="6" rx="3" fill="#f1e05a">
+        <animate attributeName="width" from="0" to="-0.4" dur="0.9s"
+                 begin="0.62s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <circle r="2.4" fill="#ffffff" opacity="0">
+        <animateMotion path="M42 209 L41.6 209"
+                        dur="0.9s" begin="0.62s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
+                  dur="0.9s" begin="0.62s" fill="freeze"/>
+      </circle>
+    </g>
+    <g class="reveal" style="animation-delay:0.55s">
+      <g class=""><path d="M30 224.8 L31.0 228 L30 231.2 L29.0 228 Z" fill="#B084F2"/><path d="M26.8 228 L30 229.0 L33.2 228 L30 227.0 Z" fill="#B084F2"/></g>
+      <text x="42" y="232" class="label">GDScript</text>
+      <text x="426" y="232" class="label" text-anchor="end">3.4%</text>
+      <rect x="42" y="240" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
+      <rect x="42" y="240" width="0" height="6" rx="3" fill="#B084F2">
+        <animate attributeName="width" from="0" to="-4.8" dur="0.9s"
+                 begin="0.70s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <circle r="2.4" fill="#ffffff" opacity="0">
+        <animateMotion path="M42 243 L37.2 243"
+                        dur="0.9s" begin="0.70s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
+                  dur="0.9s" begin="0.70s" fill="freeze"/>
+      </circle>
+    </g>
 </svg>
