@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="172"
+     viewBox="0 0 640 172">
+  <style>
+    text { font-family: 'Fira Code', ui-monospace, Menlo, Consolas, monospace; }
+    .title { font-size: 16px; font-weight: 700; fill: #FCEFCB;
+              filter: drop-shadow(0 0 4px rgba(242,169,59,0.45)); }
+    .caption { font-size: 11px; fill: #6b6094; }
+    .label { font-size: 13px; fill: #d8cdf0; }
+    .value { font-size: 13px; font-weight: 700; fill: #F2A93B;
+              filter: drop-shadow(0 0 3px rgba(242,169,59,0.35)); }
+
+    .twinkle-a { animation: twinkle 2.5s ease-in-out infinite; }
+    .twinkle-b { animation: twinkle 3.2s ease-in-out infinite; }
+    .twinkle-c { animation: twinkle 4s ease-in-out infinite; }
+    @keyframes twinkle { 0%, 100% { opacity: .28; } 50% { opacity: 1; } }
+
+    .pulse { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box;
+              transform-origin: center; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+
+    .spin { animation: rot 3.2s linear infinite; transform-box: fill-box;
+             transform-origin: center; }
+    @keyframes rot { to { transform: rotate(360deg); } }
+
+    .reveal { opacity: 0; animation: fadeUp .6s ease-out forwards; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); }
+                          to { opacity: 1; transform: translateY(0); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .twinkle-a, .twinkle-b, .twinkle-c, .pulse, .spin { animation: none; }
+      .reveal { opacity: 1; animation: none; }
+      .type-wrap { animation: none !important; clip-path: none !important; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="proj-proyecto-jo-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0221"/>
+      <stop offset="100%" stop-color="#1a0a3d"/>
+    </linearGradient>
+    <radialGradient id="proj-proyecto-jo-glow" cx="12%" cy="10%" r="55%">
+      <stop offset="0%" stop-color="#F2A93B" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#F2A93B" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="proj-proyecto-jo-clip"><rect width="640" height="172" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#proj-proyecto-jo-clip)">
+    <rect width="640" height="172" fill="url(#proj-proyecto-jo-sky)"/>
+    <rect width="640" height="172" fill="url(#proj-proyecto-jo-glow)"/>
+    <g id="proj-proyecto-jo-bgstars"><circle cx="274" cy="71" r="1.0" fill="#FCEFCB" opacity="0.35" class="twinkle-a"/><circle cx="455" cy="54" r="1.3" fill="#F2A93B" opacity="0.35" class="twinkle-b"/><circle cx="448" cy="63" r="1.6" fill="#F2A93B" opacity="0.35" class="twinkle-c"/><circle cx="77" cy="94" r="1.0" fill="#F2A93B" opacity="0.35" class="twinkle-a"/><circle cx="254" cy="15" r="1.3" fill="#FCEFCB" opacity="0.35" class="twinkle-b"/><circle cx="35" cy="30" r="1.6" fill="#F2A93B" opacity="0.35" class="twinkle-c"/><circle cx="588" cy="31" r="1.0" fill="#F2A93B" opacity="0.35" class="twinkle-a"/><circle cx="457" cy="102" r="1.3" fill="#F2A93B" opacity="0.35" class="twinkle-b"/><circle cx="554" cy="127" r="1.6" fill="#FCEFCB" opacity="0.35" class="twinkle-c"/></g>
+  </g>
+  <rect x="0.5" y="0.5" width="639" height="171" rx="14"
+        fill="none" stroke="#F2A93B" stroke-opacity="0.35"/>
+  <g class="type-wrap" style="overflow:hidden;animation:type-proj-proyecto-jo 1s steps(12,end) 1 forwards">
+    <text x="24" y="34" class="title">Proyecto Jo&apos;</text>
+  </g>
+  <style>@keyframes type-proj-proyecto-jo { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }</style>
+  
+  <g class="reveal" style="animation-delay:.15s"><text x="24" y="62" class="label">Gestión financiera para negocios en ASP.NET Core (.NET 10), arquitectura</text><text x="24" y="82" class="label">hexagonal, tiempo real con SignalR y 26 tests con xUnit.</text></g>
+  <g class="reveal" style="animation-delay:.3s"><rect x="24.0" y="116" width="99.2" height="22" rx="11.0" fill="#F2A93B" fill-opacity="0.10" stroke="#F2A93B" stroke-opacity="0.55"/><text x="73.6" y="131.0" text-anchor="middle" font-size="11" fill="#F2A93B">ASP.NET Core</text><rect x="131.2" y="116" width="66.2" height="22" rx="11.0" fill="#B084F2" fill-opacity="0.10" stroke="#B084F2" stroke-opacity="0.55"/><text x="164.3" y="131.0" text-anchor="middle" font-size="11" fill="#B084F2">.NET 10</text><rect x="205.4" y="116" width="66.2" height="22" rx="11.0" fill="#F2A93B" fill-opacity="0.10" stroke="#F2A93B" stroke-opacity="0.55"/><text x="238.5" y="131.0" text-anchor="middle" font-size="11" fill="#F2A93B">SignalR</text><rect x="279.6" y="116" width="66.2" height="22" rx="11.0" fill="#B084F2" fill-opacity="0.10" stroke="#B084F2" stroke-opacity="0.55"/><text x="312.7" y="131.0" text-anchor="middle" font-size="11" fill="#B084F2">Swagger</text><rect x="353.8" y="116" width="53.0" height="22" rx="11.0" fill="#F2A93B" fill-opacity="0.10" stroke="#F2A93B" stroke-opacity="0.55"/><text x="380.3" y="131.0" text-anchor="middle" font-size="11" fill="#F2A93B">xUnit</text></g>
+  <text x="616" y="156" text-anchor="end" font-size="12" fill="#F2A93B" class="reveal" style="animation-delay:.4s">Ver repositorio &#8594;</text>
+</svg>

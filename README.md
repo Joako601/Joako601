@@ -20,6 +20,22 @@
 
 </div>
 
+<div align="center">
+<sub>
+<a href="#sobre-mi">Sobre mí</a> ·
+<a href="#stack">Stack</a> ·
+<a href="#proyectos">Proyectos</a> ·
+<a href="#colaboradores">Colaboradores</a> ·
+<a href="#certificaciones">Certificaciones</a> ·
+<a href="#stats">Stats</a>
+</sub>
+</div>
+
+<div align="center">
+<sub><img src="https://komarev.com/ghpvc/?username=Joako601&style=flat-square&color=0d0221&label=Visitas+al+perfil" alt="Visitas al perfil"/></sub>
+</div>
+
+<a id="sobre-mi"></a>
 
 ## ➤ Sobre Mí
 
@@ -39,6 +55,8 @@ Mi enfoque no solo es escribir código, sino diseñar soluciones que resuelvan p
 Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendiendo y mejorando mis habilidades técnicas en un entorno real de desarrollo.
 
 ---
+
+<a id="stack"></a>
 
 ## ✦ Stack Tecnológico
 
@@ -92,8 +110,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **Sistemas Operativos**
 
-<img src="https://skillicons.dev/icons?i=linux" /><br/>
-<img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows11&logoColor=white" height="28"/>
+<img src="https://skillicons.dev/icons?i=linux,windows" />
 
 </td>
 <td align="center" width="20%">
@@ -132,13 +149,21 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 ---
 
+<a id="proyectos"></a>
+
 ## ☕︎ Proyectos Destacados
 
-### 𝓜 [market-backend](https://github.com/Joako601/market-backend)
-API REST en **Java + Spring Boot**, con arquitectura limpia por capas (domain, persistence, service, controller). Gestión de compras con relaciones JPA (`@OneToMany`, `@MapsId`), mapeo con **MapStruct** y buenas prácticas RESTful (manejo de estados 201/404).
+<div align="center">
 
-### ☁︎ [Proyecto Jo'](https://github.com/Joako601/Proyecto-Jo)
-Sistema de gestión financiera y administrativa para pequeños y medianos negocios, construido en **ASP.NET Core (.NET 10)** bajo **Arquitectura Hexagonal (Ports & Adapters)**. Incluye panel administrativo con Razor Views, sincronización en tiempo real vía **SignalR** para Cocina/Recepción, API REST documentada con Swagger, y una suite de 26 tests con xUnit + Moq.
+<a href="https://github.com/Joako601/market-backend">
+  <img src="./assets/project-market-backend.svg" width="640" alt="market-backend"/>
+</a>
+
+<a href="https://github.com/Joako601/Proyecto-Jo">
+  <img src="./assets/project-proyecto-jo.svg" width="640" alt="Proyecto Jo&apos;"/>
+</a>
+
+</div>
 
 ---
 
@@ -150,6 +175,8 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 
 ---
 
+<a id="colaboradores"></a>
+
 ## ⏾ Con quién colaboré
 
 <div align="center">
@@ -157,6 +184,8 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 </div>
 
 ---
+
+<a id="certificaciones"></a>
 
 ## ✓ Certificaciones
 
@@ -216,6 +245,8 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 
 ---
 
+<a id="stats"></a>
+
 ## ▣ Estadísticas de Desarrollo
 
 <div align="center">
@@ -229,7 +260,7 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 
 ---
 
-##  Libro de Visitas ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
+## Libro de Visitas ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
 ¿Pasaste por acá? [Dejá tu saludo](https://github.com/Joako601/Joako601/issues/1) 
 
 ---
