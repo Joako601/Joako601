@@ -163,6 +163,16 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <table align="center">
 <tr>
 <td align="center" width="25%">
+<a href="https://www.credly.com/badges/05da6533-20e5-4aa9-9f82-5e6755c0a769/linked_in_profile">
+<img src="https://images.credly.com/images/7fa09e71-4149-4d59-9066-14fc8a3e0f39/blob" width="160" alt="AWS Academy Graduate - Generative AI Foundations - Training Badge"/>
+</a>
+</td>
+<td align="center" width="25%">
+<a href="https://www.credly.com/badges/3fd2a050-8e96-4447-8fd3-b679054eaf42/linked_in_profile">
+<img src="https://images.credly.com/images/6ff76b93-852c-4f9e-a73a-fc10424a1007/blob" width="160" alt="AWS Academy Graduate - Microservices and CI/CD Pipeline Builder - Training Badge"/>
+</a>
+</td>
+<td align="center" width="25%">
 <a href="https://www.credly.com/badges/d966a1b9-3295-41f8-8f7e-cb8046a4ba9f/linked_in_profile">
 <img src="https://images.credly.com/images/7f7ea828-a10d-44f8-8baa-58a9c1af7671/blob" width="160" alt="AWS Academy Graduate - Cloud Security Foundations - Training Badge"/>
 </a>
@@ -172,6 +182,8 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <img src="https://images.credly.com/images/bb3211c0-a562-44ec-a8b5-df54deb0e5e9/blob" width="160" alt="AWS Academy Graduate - Cloud Developing - Training Badge"/>
 </a>
 </td>
+</tr>
+<tr>
 <td align="center" width="25%">
 <a href="https://www.credly.com/badges/0e4d9f5f-4c1f-40be-8422-ff31b91d862b/linked_in_profile">
 <img src="https://images.credly.com/images/7b3f119b-ada8-4ff6-817a-f2a8bbb7fe97/blob" width="160" alt="AWS Academy Graduate - Cloud Web Application Builder - Training Badge"/>
@@ -192,6 +204,8 @@ Sistema de gestión financiera y administrativa para pequeños y medianos negoci
 <img src="https://images.credly.com/images/082c8d0c-5232-4597-b6c4-6bebcc4f3046/blob" width="160" alt="AI Skills Fest 2026"/>
 </a>
 </td>
+</tr>
+<tr>
 <td align="center" width="25%">
 <a href="https://www.credly.com/badges/0b536b28-de3a-4cf2-b548-160519c4bb9e/linked_in_profile">
 <img src="https://images.credly.com/images/978f88dc-c247-4093-9d39-6efac3651297/image.png" width="160" alt="Network Technician Career Path"/>

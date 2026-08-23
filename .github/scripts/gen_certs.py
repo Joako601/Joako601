@@ -1,12 +1,14 @@
 import json
 import re
 
-with open("badges.json", "r") as f:
+PER_ROW = 4  # coincide con width="25%" por celda; si cambia, ajustar ambos
+
+with open("badges.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 badges = data.get("data", [])
 
-rows = []
+cells = []
 for badge in badges:
     name = badge.get("badge_template", {}).get("name", "Certificación")
     image_url = badge.get("badge_template", {}).get("image_url", "")
@@ -18,15 +20,23 @@ for badge in badges:
 <img src="{image_url}" width="160" alt="{name}"/>
 </a>
 </td>'''
-    rows.append(cell)
+    cells.append(cell)
 
-table = "<table align=\"center\">\n<tr>\n" + "\n".join(rows) + "\n</tr>\n</table>"
+# Filas de PER_ROW celdas: con todo en una sola <tr>, width="25%" x N celdas
+# suma más de 100% apenas hay más de 4 badges y la fila termina desbordando
+# (scroll horizontal en vez de bajar de línea). Partir en filas de a 4 evita eso.
+rows = []
+for i in range(0, len(cells), PER_ROW):
+    chunk = cells[i:i + PER_ROW]
+    rows.append("<tr>\n" + "\n".join(chunk) + "\n</tr>")
 
-with open("README.md", "r") as f:
+table = "<table align=\"center\">\n" + "\n".join(rows) + "\n</table>"
+
+with open("README.md", "r", encoding="utf-8") as f:
     readme = f.read()
 
 pattern = r'(## ✓ Certificaciones\s*\n\s*)<table align="center">.*?</table>'
 readme_new = re.sub(pattern, r'\1' + table, readme, flags=re.DOTALL)
 
-with open("README.md", "w") as f:
+with open("README.md", "w", encoding="utf-8") as f:
     f.write(readme_new)
