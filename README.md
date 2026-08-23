@@ -276,6 +276,6 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 </div>
 
 <div align="center">
-<sub><img src="https://komarev.com/ghpvc/?username=Joako601&style=flat-square&color=F2A93B&label=Visitas+al+perfil" alt="Visitas al perfil"/></sub>
+<sub><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FJoako601%2FJoako601.json&style=for-the-badge&label=Visitas%20al%20perfil&color=F2A93B" alt="Visitas al perfil (cuenta cargas de página, no visitantes distintos — GitHub no deja distinguirlos)"/></sub>
 </div>
 
