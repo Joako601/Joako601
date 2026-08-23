@@ -119,16 +119,20 @@ def sync_icon(x, y):
     )
 
 
-def card_chrome(uid, width, height):
-    """Fondo cielo nocturno + halo dorado en la esquina + borde."""
+def card_chrome(uid, width, height, glow=("12%", "10%"), glow_color=ACCENT):
+    """Fondo cielo nocturno + halo de luz + borde. `glow` es el (cx, cy) del
+    halo — por defecto un rincón superior-izquierdo (tarjetas de datos);
+    pasale ("50%", "0%") para un halo tipo reflector centrado arriba
+    (tarjetas "destacado/spotlight", ej. proyectos)."""
+    gx, gy = glow
     return f'''<defs>
     <linearGradient id="{uid}-sky" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="{BG_1}"/>
       <stop offset="100%" stop-color="{BG_2}"/>
     </linearGradient>
-    <radialGradient id="{uid}-glow" cx="12%" cy="10%" r="55%">
-      <stop offset="0%" stop-color="{ACCENT}" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="{ACCENT}" stop-opacity="0"/>
+    <radialGradient id="{uid}-glow" cx="{gx}" cy="{gy}" r="55%">
+      <stop offset="0%" stop-color="{glow_color}" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="{glow_color}" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="{uid}-clip"><rect width="{width}" height="{height}" rx="14"/></clipPath>
   </defs>

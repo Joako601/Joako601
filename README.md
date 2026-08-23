@@ -21,18 +21,14 @@
 </div>
 
 <div align="center">
-<sub>
-<a href="#sobre-mi">Sobre mí</a> ·
-<a href="#stack">Stack</a> ·
-<a href="#proyectos">Proyectos</a> ·
-<a href="#colaboradores">Colaboradores</a> ·
-<a href="#certificaciones">Certificaciones</a> ·
-<a href="#stats">Stats</a>
-</sub>
-</div>
 
-<div align="center">
-<sub><img src="https://komarev.com/ghpvc/?username=Joako601&style=flat-square&color=0d0221&label=Visitas+al+perfil" alt="Visitas al perfil"/></sub>
+[![Sobre mí](https://img.shields.io/badge/Sobre_mí-0d0221?style=flat-square)](#sobre-mi)
+[![Stack](https://img.shields.io/badge/Stack-0d0221?style=flat-square)](#stack)
+[![Proyectos](https://img.shields.io/badge/Proyectos-0d0221?style=flat-square)](#proyectos)
+[![Colaboradores](https://img.shields.io/badge/Colaboradores-0d0221?style=flat-square)](#colaboradores)
+[![Certificaciones](https://img.shields.io/badge/Certificaciones-0d0221?style=flat-square)](#certificaciones)
+[![Stats](https://img.shields.io/badge/Stats-0d0221?style=flat-square)](#stats)
+
 </div>
 
 <a id="sobre-mi"></a>
@@ -156,11 +152,11 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 <div align="center">
 
 <a href="https://github.com/Joako601/market-backend">
-  <img src="./assets/project-market-backend.svg" width="640" alt="market-backend"/>
+  <img src="./assets/project-market-backend.svg" width="520" alt="market-backend"/>
 </a>
 
 <a href="https://github.com/Joako601/Proyecto-Jo">
-  <img src="./assets/project-proyecto-jo.svg" width="640" alt="Proyecto Jo&apos;"/>
+  <img src="./assets/project-proyecto-jo.svg" width="520" alt="Proyecto Jo&apos;"/>
 </a>
 
 </div>
@@ -277,5 +273,9 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
   <sub><i>Joako601</i></sub>
   <br/>
   <sub>Última actualización: 23 de agosto de 2026</sub>
+</div>
+
+<div align="center">
+<sub><img src="https://komarev.com/ghpvc/?username=Joako601&style=flat-square&color=F2A93B&label=Visitas+al+perfil" alt="Visitas al perfil"/></sub>
 </div>
 
