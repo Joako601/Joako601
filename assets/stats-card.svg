@@ -74,7 +74,7 @@
     <g class="reveal" style="animation-delay:0.39s">
       <g class="twinkle-a"><path d="M30 156.4 L31.1 160 L30 163.6 L28.9 160 Z" fill="#F2A93B"/><path d="M26.4 160 L30 161.1 L33.6 160 L30 158.9 Z" fill="#F2A93B"/></g>
       <text x="42" y="164" class="label">Total de commits</text>
-      <text x="426" y="164" class="value" text-anchor="end">421</text>
+      <text x="426" y="164" class="value" text-anchor="end">434</text>
     </g>
     <g class="reveal" style="animation-delay:0.47s">
       <g class="twinkle-b"><path d="M30 190.4 L31.1 194 L30 197.6 L28.9 194 Z" fill="#F2A93B"/><path d="M26.4 194 L30 195.1 L33.6 194 L30 192.9 Z" fill="#F2A93B"/></g>
