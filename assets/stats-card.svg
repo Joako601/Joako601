@@ -64,7 +64,7 @@
     <g class="reveal" style="animation-delay:0.23s">
       <g class="twinkle-b"><path d="M30 88.4 L31.1 92 L30 95.6 L28.9 92 Z" fill="#F2A93B"/><path d="M26.4 92 L30 93.1 L33.6 92 L30 90.9 Z" fill="#F2A93B"/></g>
       <text x="42" y="96" class="label">Seguidores</text>
-      <text x="426" y="96" class="value" text-anchor="end">10</text>
+      <text x="426" y="96" class="value" text-anchor="end">11</text>
     </g>
     <g class="reveal" style="animation-delay:0.31s">
       <g class="twinkle-c"><path d="M30 122.4 L31.1 126 L30 129.6 L28.9 126 Z" fill="#F2A93B"/><path d="M26.4 126 L30 127.1 L33.6 126 L30 124.9 Z" fill="#F2A93B"/></g>
