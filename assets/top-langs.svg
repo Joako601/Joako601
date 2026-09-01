@@ -59,7 +59,7 @@
     <g class="reveal" style="animation-delay:0.15s">
       <g class=""><path d="M30 54.8 L31.0 58 L30 61.2 L29.0 58 Z" fill="#e34c26"/><path d="M26.8 58 L30 59.0 L33.2 58 L30 57.0 Z" fill="#e34c26"/></g>
       <text x="42" y="62" class="label">HTML</text>
-      <text x="426" y="62" class="label" text-anchor="end">43.0%</text>
+      <text x="426" y="62" class="label" text-anchor="end">43.1%</text>
       <rect x="42" y="70" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="70" width="0" height="6" rx="3" fill="#e34c26">
         <animate attributeName="width" from="0" to="147.3" dur="0.9s"
@@ -76,7 +76,7 @@
     <g class="reveal" style="animation-delay:0.23s">
       <g class=""><path d="M30 88.8 L31.0 92 L30 95.2 L29.0 92 Z" fill="#178600"/><path d="M26.8 92 L30 93.0 L33.2 92 L30 91.0 Z" fill="#178600"/></g>
       <text x="42" y="96" class="label">C#</text>
-      <text x="426" y="96" class="label" text-anchor="end">28.6%</text>
+      <text x="426" y="96" class="label" text-anchor="end">28.5%</text>
       <rect x="42" y="104" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="104" width="0" height="6" rx="3" fill="#178600">
         <animate attributeName="width" from="0" to="91.6" dur="0.9s"
