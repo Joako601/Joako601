@@ -62,12 +62,12 @@
       <text x="426" y="62" class="label" text-anchor="end">43.0%</text>
       <rect x="42" y="70" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="70" width="0" height="6" rx="3" fill="#e34c26">
-        <animate attributeName="width" from="0" to="147.1" dur="0.9s"
+        <animate attributeName="width" from="0" to="147.2" dur="0.9s"
                  begin="0.30s" fill="freeze"
                  calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
       </rect>
       <circle r="2.4" fill="#ffffff" opacity="0">
-        <animateMotion path="M42 73 L189.1 73"
+        <animateMotion path="M42 73 L189.2 73"
                         dur="0.9s" begin="0.30s" fill="freeze"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
                   dur="0.9s" begin="0.30s" fill="freeze"/>
@@ -79,12 +79,12 @@
       <text x="426" y="96" class="label" text-anchor="end">28.2%</text>
       <rect x="42" y="104" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="104" width="0" height="6" rx="3" fill="#178600">
-        <animate attributeName="width" from="0" to="90.5" dur="0.9s"
+        <animate attributeName="width" from="0" to="90.4" dur="0.9s"
                  begin="0.38s" fill="freeze"
                  calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
       </rect>
       <circle r="2.4" fill="#ffffff" opacity="0">
-        <animateMotion path="M42 107 L132.5 107"
+        <animateMotion path="M42 107 L132.4 107"
                         dur="0.9s" begin="0.38s" fill="freeze"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
                   dur="0.9s" begin="0.38s" fill="freeze"/>
@@ -93,15 +93,15 @@
     <g class="reveal" style="animation-delay:0.31s">
       <g class=""><path d="M30 122.8 L31.0 126 L30 129.2 L29.0 126 Z" fill="#563d7c"/><path d="M26.8 126 L30 127.0 L33.2 126 L30 125.0 Z" fill="#563d7c"/></g>
       <text x="42" y="130" class="label">CSS</text>
-      <text x="426" y="130" class="label" text-anchor="end">12.9%</text>
+      <text x="426" y="130" class="label" text-anchor="end">13.0%</text>
       <rect x="42" y="138" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="138" width="0" height="6" rx="3" fill="#563d7c">
-        <animate attributeName="width" from="0" to="31.7" dur="0.9s"
+        <animate attributeName="width" from="0" to="31.8" dur="0.9s"
                  begin="0.46s" fill="freeze"
                  calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
       </rect>
       <circle r="2.4" fill="#ffffff" opacity="0">
-        <animateMotion path="M42 141 L73.7 141"
+        <animateMotion path="M42 141 L73.8 141"
                         dur="0.9s" begin="0.46s" fill="freeze"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
                   dur="0.9s" begin="0.46s" fill="freeze"/>
@@ -113,12 +113,12 @@
       <text x="426" y="164" class="label" text-anchor="end">7.3%</text>
       <rect x="42" y="172" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="172" width="0" height="6" rx="3" fill="#b07219">
-        <animate attributeName="width" from="0" to="10.2" dur="0.9s"
+        <animate attributeName="width" from="0" to="10.1" dur="0.9s"
                  begin="0.54s" fill="freeze"
                  calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
       </rect>
       <circle r="2.4" fill="#ffffff" opacity="0">
-        <animateMotion path="M42 175 L52.2 175"
+        <animateMotion path="M42 175 L52.1 175"
                         dur="0.9s" begin="0.54s" fill="freeze"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
                   dur="0.9s" begin="0.54s" fill="freeze"/>
@@ -147,12 +147,12 @@
       <text x="426" y="232" class="label" text-anchor="end">3.4%</text>
       <rect x="42" y="240" width="366" height="6" rx="3" fill="#F2A93B" fill-opacity="0.12"/>
       <rect x="42" y="240" width="0" height="6" rx="3" fill="#B084F2">
-        <animate attributeName="width" from="0" to="-5.0" dur="0.9s"
+        <animate attributeName="width" from="0" to="-5.1" dur="0.9s"
                  begin="0.70s" fill="freeze"
                  calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
       </rect>
       <circle r="2.4" fill="#ffffff" opacity="0">
-        <animateMotion path="M42 243 L37.0 243"
+        <animateMotion path="M42 243 L36.9 243"
                         dur="0.9s" begin="0.70s" fill="freeze"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1"
                   dur="0.9s" begin="0.70s" fill="freeze"/>
