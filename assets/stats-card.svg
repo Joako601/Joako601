@@ -79,7 +79,7 @@
     <g class="reveal" style="animation-delay:0.47s">
       <g class="twinkle-b"><path d="M30 190.4 L31.1 194 L30 197.6 L28.9 194 Z" fill="#F2A93B"/><path d="M26.4 194 L30 195.1 L33.6 194 L30 192.9 Z" fill="#F2A93B"/></g>
       <text x="42" y="198" class="label">Pull Requests</text>
-      <text x="426" y="198" class="value" text-anchor="end">17</text>
+      <text x="426" y="198" class="value" text-anchor="end">18</text>
     </g>
     <g class="reveal" style="animation-delay:0.55s">
       <g class="twinkle-c"><path d="M30 224.4 L31.1 228 L30 231.6 L28.9 228 Z" fill="#F2A93B"/><path d="M26.4 228 L30 229.1 L33.6 228 L30 226.9 Z" fill="#F2A93B"/></g>
