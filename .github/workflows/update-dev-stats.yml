@@ -21,7 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r .github/scripts/requirements.txt
 
       - name: Run dev stats script
         env:
@@ -39,5 +39,5 @@ jobs:
           # fecha se actualiza acá, solo cuando hubo cambios reales.
           bash .github/scripts/update_date.sh
           git add README.md
-          git commit -m "🤖 Actualizar estadísticas de desarrollo"
+          git commit -m "chore(stats): actualizar estadísticas de desarrollo"
           git push

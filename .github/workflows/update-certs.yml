@@ -31,5 +31,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git diff --quiet && exit 0
           git add README.md
-          git commit -m " Actualizar certificaciones desde Credly"
+          git commit -m "chore(certs): actualizar certificaciones desde Credly"
           git push
