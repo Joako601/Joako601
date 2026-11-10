@@ -23,5 +23,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git diff --quiet && exit 0
           git add README.md
-          git commit -m "🤖 Actualizar fecha automáticamente"
+          git commit -m "chore(date): actualizar fecha"
           git push
