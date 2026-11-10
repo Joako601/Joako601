@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 
 PER_ROW = 4  # coincide con width="25%" por celda; si cambia, ajustar ambos
 
@@ -7,6 +8,10 @@ with open("badges.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 badges = data.get("data", [])
+
+# Sin badges la tabla quedaría vacía y se commitearía encima de la actual.
+if not badges:
+    sys.exit("[ERROR] Credly no devolvió badges; no se modifica el README.")
 
 cells = []
 for badge in badges:

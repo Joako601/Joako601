@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -34,5 +34,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md assets/stats-card.svg assets/top-langs.svg assets/activity-graph.svg
-          git diff --cached --quiet || git commit -m "🤖 Actualizar estadísticas de desarrollo"
+          git diff --cached --quiet && exit 0
+          # Los commits de este bot no disparan update-date.yml, así que la
+          # fecha se actualiza acá, solo cuando hubo cambios reales.
+          bash .github/scripts/update_date.sh
+          git add README.md
+          git commit -m "🤖 Actualizar estadísticas de desarrollo"
           git push
