@@ -22,6 +22,7 @@ secrets.GITHUB_TOKEN) y GITHUB_USERNAME.
 
 import os
 import re
+import sys
 import requests
 
 from svg_theme import (
@@ -65,6 +66,11 @@ LANG_COLORS = {
 # Fetch de datos (sin cambios de comportamiento)
 # ---------------------------------------------------------------------------
 
+def abort(message):
+    """Corta la corrida antes de escribir nada, para no publicar tarjetas en cero."""
+    sys.exit(f"[ERROR] {message}")
+
+
 def get_owned_repos():
     """Todos los repos propios (no forks) de GITHUB_USERNAME."""
     repos = []
@@ -76,8 +82,7 @@ def get_owned_repos():
             params={"per_page": 100, "page": page, "type": "owner"},
         )
         if r.status_code != 200:
-            print(f"[WARN] get_owned_repos falló (status {r.status_code}): {r.text[:200]}")
-            break
+            abort(f"get_owned_repos falló (status {r.status_code}): {r.text[:200]}")
         batch = r.json()
         if not batch:
             break
@@ -89,8 +94,7 @@ def get_owned_repos():
 def get_user_profile():
     r = requests.get(f"{API_BASE}/users/{GITHUB_USERNAME}", headers=HEADERS)
     if r.status_code != 200:
-        print(f"[WARN] get_user_profile falló (status {r.status_code}): {r.text[:200]}")
-        return {}
+        abort(f"get_user_profile falló (status {r.status_code}): {r.text[:200]}")
     return r.json()
 
 
@@ -102,8 +106,7 @@ def search_count(endpoint, query):
         params={"q": query, "per_page": 1},
     )
     if r.status_code != 200:
-        print(f"[WARN] search_count({endpoint!r}, {query!r}) falló (status {r.status_code}): {r.text[:200]}")
-        return 0
+        abort(f"search_count({endpoint!r}, {query!r}) falló (status {r.status_code}): {r.text[:200]}")
     return r.json().get("total_count", 0)
 
 
@@ -127,8 +130,7 @@ def get_language_bytes(repos):
             continue
         r = requests.get(url, headers=HEADERS)
         if r.status_code != 200:
-            print(f"[WARN] languages_url de {repo['name']} falló (status {r.status_code})")
-            continue
+            abort(f"languages_url de {repo['name']} falló (status {r.status_code})")
         for lang, count in r.json().items():
             totals[lang] = totals.get(lang, 0) + count
     return totals

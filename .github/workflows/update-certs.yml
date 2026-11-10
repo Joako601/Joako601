@@ -11,16 +11,16 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
       - name: Fetch Credly badges
         run: |
-          curl -s "https://www.credly.com/users/joaquin-uriona/badges.json" -o badges.json
+          curl -fsS "https://www.credly.com/users/joaquin-uriona/badges.json" -o badges.json
 
       - name: Generate certifications table
         run: python .github/scripts/gen_certs.py
