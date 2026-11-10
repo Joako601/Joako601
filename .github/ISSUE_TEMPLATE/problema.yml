@@ -1,0 +1,27 @@
+name: Reportar un problema
+description: Un link roto, algo que se ve mal o un workflow que falla
+title: "fix: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - README
+        - Workflow
+        - Script
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Qué pasa
+      description: Qué viste y qué esperabas ver.
+    validations:
+      required: true
+  - type: input
+    id: enlace
+    attributes:
+      label: Enlace
+      description: Link a la corrida del workflow o a la parte afectada, si aplica.
