@@ -58,72 +58,88 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 <table align="center">
 <tr>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **Lenguajes**
 
 <img src="https://skillicons.dev/icons?i=java,cs,python" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
-**Frameworks / APIs**
+**Frameworks**
 
-<img src="https://skillicons.dev/icons?i=spring,dotnet,fastapi,graphql" />
+<img src="https://skillicons.dev/icons?i=spring,dotnet,fastapi" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
+
+**APIs**
+
+<img src="https://skillicons.dev/icons?i=graphql" />
+
+</td>
+<td align="center" width="25%">
 
 **Web**
 
 <img src="https://skillicons.dev/icons?i=html,css" />
 
 </td>
-<td align="center" width="20%">
+</tr>
+<tr>
+<td align="center" width="25%">
 
 **Bases de Datos**
 
 <img src="https://skillicons.dev/icons?i=postgres" /> <img src="https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=sqlite&logoColor=white" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
-**Cloud / DevOps**
+**Cloud**
 
-<img src="https://skillicons.dev/icons?i=aws,docker,githubactions" />
-
-</td>
-</tr>
-<tr>
-<td align="center" width="20%">
-
-**Control de Versiones**
-
-<img src="https://skillicons.dev/icons?i=git,github" />
+<img src="https://skillicons.dev/icons?i=aws" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
-**Sistemas Operativos**
+**DevOps**
 
-<img src="https://skillicons.dev/icons?i=linux,windows" />
-
-</td>
-<td align="center" width="20%">
-
-**Terminal / Shell**
-
-<img src="https://skillicons.dev/icons?i=bash,powershell" />
+<img src="https://skillicons.dev/icons?i=docker,githubactions" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **Build Tools**
 
 <img src="https://skillicons.dev/icons?i=gradle,maven" />
 
 </td>
-<td align="center" width="20%">
+</tr>
+<tr>
+<td align="center" width="25%">
+
+**Control de Versiones**
+
+<img src="https://skillicons.dev/icons?i=git,github" />
+
+</td>
+<td align="center" width="25%">
+
+**Sistemas Operativos**
+
+<img src="https://skillicons.dev/icons?i=linux,windows" />
+
+</td>
+<td align="center" width="25%">
+
+**Terminal / Shell**
+
+<img src="https://skillicons.dev/icons?i=bash,powershell" />
+
+</td>
+<td align="center" width="25%">
 
 **Editores / IDEs**
 
