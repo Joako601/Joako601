@@ -92,7 +92,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **Bases de Datos**
 
-<img src="https://skillicons.dev/icons?i=postgres" /> <img src="https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=sqlite&logoColor=white" />
+<img src="https://skillicons.dev/icons?i=postgres" />
 
 </td>
 <td align="center" width="25%">
