@@ -8,6 +8,22 @@ El formato se basa en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/
 - **MINOR:** una sección o un workflow nuevo.
 - **PATCH:** correcciones.
 
+## [Sin publicar]
+
+### Agregado
+
+- Docker, GitHub Actions, Maven, FastAPI, GraphQL y API REST en el stack.
+- Apartado AI con Claude y Gemini.
+
+### Cambiado
+
+- El stack pasa a 3 filas de 4 categorías para no amontonar los íconos.
+- Las habilidades blandas usan solo la estrella como marcador, sin viñetas.
+
+### Eliminado
+
+- Badges de SQL y Antigravity del stack.
+
 ## [1.0.0] - 2026-11-10
 
 Primera versión etiquetada. Reúne el trabajo hecho hasta esta fecha.

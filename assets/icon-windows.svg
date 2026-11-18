@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" role="img" aria-label="Windows">
+  <title>Windows</title>
+  <defs>
+    <linearGradient id="win11" x1="53" y1="53" x2="203" y2="203" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5BCBF5"/>
+      <stop offset="1" stop-color="#0067C0"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="60" fill="#242938"/>
+  <g fill="url(#win11)">
+    <rect x="53" y="53" width="71" height="71" rx="3"/>
+    <rect x="132" y="53" width="71" height="71" rx="3"/>
+    <rect x="53" y="132" width="71" height="71" rx="3"/>
+    <rect x="132" y="132" width="71" height="71" rx="3"/>
+  </g>
+</svg>

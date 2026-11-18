@@ -58,76 +58,92 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 <table align="center">
 <tr>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **Lenguajes**
 
 <img src="https://skillicons.dev/icons?i=java,cs,python" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **Frameworks**
 
-<img src="https://skillicons.dev/icons?i=spring,dotnet" />
+<img src="https://skillicons.dev/icons?i=spring,dotnet,fastapi" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
+
+**APIs**
+
+<img src="https://skillicons.dev/icons?i=graphql" /> <img src="./assets/icon-rest.svg" width="48" alt="API REST" /> <img src="./assets/icon-swagger.svg" width="48" alt="Swagger" />
+
+</td>
+<td align="center" width="25%">
 
 **Web**
 
 <img src="https://skillicons.dev/icons?i=html,css" />
 
 </td>
-<td align="center" width="20%">
+</tr>
+<tr>
+<td align="center" width="25%">
 
 **Bases de Datos**
 
-<img src="https://skillicons.dev/icons?i=postgres" /> <img src="https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=sqlite&logoColor=white" />
+<img src="https://skillicons.dev/icons?i=postgres" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
-**Cloud**
+**Cloud / DevOps**
 
-<img src="https://skillicons.dev/icons?i=aws" />
+<img src="https://skillicons.dev/icons?i=aws,docker,githubactions" />
 
 </td>
-</tr>
-<tr>
-<td align="center" width="20%">
+<td align="center" width="25%">
+
+**Build Tools**
+
+<img src="https://skillicons.dev/icons?i=gradle,maven" />
+
+</td>
+<td align="center" width="25%">
 
 **Control de Versiones**
 
 <img src="https://skillicons.dev/icons?i=git,github" />
 
 </td>
-<td align="center" width="20%">
+</tr>
+<tr>
+<td align="center" width="25%">
 
 **Sistemas Operativos**
 
-<img src="https://skillicons.dev/icons?i=linux,windows" />
+<img src="https://skillicons.dev/icons?i=arch" /> <img src="./assets/icon-windows.svg" width="48" alt="Windows" />
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **Terminal / Shell**
 
 <img src="https://skillicons.dev/icons?i=bash,powershell" />
 
 </td>
-<td align="center" width="20%">
-
-**Build Tools**
-
-<img src="https://skillicons.dev/icons?i=gradle" />
-
-</td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **Editores / IDEs**
 
-<img src="https://skillicons.dev/icons?i=vscode,visualstudio,idea" /> <img src="https://img.shields.io/badge/-Antigravity-1a1a2e?style=flat-square&logo=googlegemini&logoColor=white" />
+<img src="https://skillicons.dev/icons?i=vscode,visualstudio,idea" />
+
+</td>
+<td align="center" width="25%">
+
+**AI**
+
+<img src="./assets/icon-claude.svg" width="48" alt="Claude" /> <img src="./assets/icon-gemini.svg" width="48" alt="Gemini" />
 
 </td>
 </tr>
@@ -137,11 +153,11 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 ## ✪ Habilidades blandas
 
-* ⟡ Pensamiento analítico
-* ⟡ Resolución de problemas complejos
-* ⟡ Atención al detalle
-* ⟡ Trabajo en equipo
-* ⟡ Adaptabilidad y aprendizaje autónomo
+⟡ Pensamiento analítico\
+⟡ Resolución de problemas complejos\
+⟡ Atención al detalle\
+⟡ Trabajo en equipo\
+⟡ Adaptabilidad y aprendizaje autónomo
 
 ---
 
