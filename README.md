@@ -97,16 +97,9 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 </td>
 <td align="center" width="25%">
 
-**Cloud**
+**Cloud / DevOps**
 
-<img src="https://skillicons.dev/icons?i=aws" />
-
-</td>
-<td align="center" width="25%">
-
-**DevOps**
-
-<img src="https://skillicons.dev/icons?i=docker,githubactions" />
+<img src="https://skillicons.dev/icons?i=aws,docker,githubactions" />
 
 </td>
 <td align="center" width="25%">
@@ -116,8 +109,6 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 <img src="https://skillicons.dev/icons?i=gradle,maven" />
 
 </td>
-</tr>
-<tr>
 <td align="center" width="25%">
 
 **Control de Versiones**
@@ -125,6 +116,8 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 <img src="https://skillicons.dev/icons?i=git,github" />
 
 </td>
+</tr>
+<tr>
 <td align="center" width="25%">
 
 **Sistemas Operativos**
@@ -143,7 +136,14 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **Editores / IDEs**
 
-<img src="https://skillicons.dev/icons?i=vscode,visualstudio,idea" /> <img src="https://img.shields.io/badge/-Antigravity-1a1a2e?style=flat-square&logo=googlegemini&logoColor=white" />
+<img src="https://skillicons.dev/icons?i=vscode,visualstudio,idea" />
+
+</td>
+<td align="center" width="25%">
+
+**AI**
+
+<img src="./assets/icon-claude.svg" width="48" alt="Claude" /> <img src="./assets/icon-gemini.svg" width="48" alt="Gemini" />
 
 </td>
 </tr>
