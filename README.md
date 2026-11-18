@@ -76,7 +76,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **APIs**
 
-<img src="https://skillicons.dev/icons?i=graphql" />
+<img src="https://skillicons.dev/icons?i=graphql" /> <img src="https://img.shields.io/badge/-API_REST-6BA539?style=flat-square&logo=openapiinitiative&logoColor=white" />
 
 </td>
 <td align="center" width="25%">
