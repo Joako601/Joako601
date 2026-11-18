@@ -76,7 +76,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **APIs**
 
-<img src="https://skillicons.dev/icons?i=graphql" /> <img src="./assets/icon-rest.svg" width="48" alt="API REST" />
+<img src="https://skillicons.dev/icons?i=graphql" /> <img src="./assets/icon-rest.svg" width="48" alt="API REST" /> <img src="./assets/icon-swagger.svg" width="48" alt="Swagger" />
 
 </td>
 <td align="center" width="25%">
@@ -122,7 +122,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **Sistemas Operativos**
 
-<img src="https://skillicons.dev/icons?i=linux" /> <img src="./assets/icon-windows.svg" width="48" alt="Windows" />
+<img src="https://skillicons.dev/icons?i=arch" /> <img src="./assets/icon-windows.svg" width="48" alt="Windows" />
 
 </td>
 <td align="center" width="25%">
