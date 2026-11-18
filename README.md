@@ -137,11 +137,11 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 ## ✪ Habilidades blandas
 
-* ⟡ Pensamiento analítico
-* ⟡ Resolución de problemas complejos
-* ⟡ Atención al detalle
-* ⟡ Trabajo en equipo
-* ⟡ Adaptabilidad y aprendizaje autónomo
+⟡ Pensamiento analítico\
+⟡ Resolución de problemas complejos\
+⟡ Atención al detalle\
+⟡ Trabajo en equipo\
+⟡ Adaptabilidad y aprendizaje autónomo
 
 ---
 
