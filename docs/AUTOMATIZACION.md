@@ -27,6 +27,16 @@ Están en `.github/scripts/`.
 | `svg_theme.py` | Paleta y utilidades compartidas para los SVG |
 | `update_date.sh` | Escribe la fecha actual en el README |
 
+## Lenguajes de repos privados
+
+Con el `GITHUB_TOKEN` automático, la tarjeta de lenguajes solo cuenta los repos públicos. Para que también cuente los privados, hay que guardar un token personal como secret `PAT_STATS`:
+
+1. Crear un *fine-grained token* en **Settings → Developer settings → Personal access tokens → Fine-grained tokens**, con acceso a **All repositories**. Con el permiso **Metadata: Read-only**, que viene por defecto, alcanza.
+2. Guardarlo en este repo: **Settings → Secrets and variables → Actions → New repository secret**, con el nombre `PAT_STATS`.
+3. Correr `update-dev-stats.yml` a mano desde **Actions**.
+
+Solo se publican los porcentajes. Los nombres de los repos privados no aparecen en la tarjeta ni en los logs. Si el token vence, la tarjeta vuelve a contar solo los públicos y el log muestra un aviso.
+
 ## Cuando algo falla
 
 Los scripts terminan en error antes de escribir archivos si no pueden obtener datos válidos. Una corrida en rojo deja publicada la versión anterior, y se puede relanzar desde la pestaña **Actions**.

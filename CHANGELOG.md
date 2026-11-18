@@ -12,6 +12,7 @@ El formato se basa en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/
 
 ### Agregado
 
+- La tarjeta de lenguajes cuenta los repos privados cuando existe el secret `PAT_STATS`.
 - Docker, GitHub Actions, Maven, FastAPI, GraphQL y API REST en el stack.
 - Apartado AI con Claude y Gemini.
 

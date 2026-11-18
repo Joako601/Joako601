@@ -18,6 +18,12 @@ como el de collaborators-marquee.svg).
 
 Requiere GITHUB_TOKEN (provisto automáticamente por el workflow vía
 secrets.GITHUB_TOKEN) y GITHUB_USERNAME.
+
+Si el workflow recibe un token personal de GITHUB_USERNAME (secret
+PAT_STATS), top-langs también cuenta los repos privados. Solo se publican
+los porcentajes: los nombres de los repos privados nunca se imprimen,
+porque los logs de Actions de un repo público son públicos. Con el
+GITHUB_TOKEN automático se cuentan solo los públicos.
 """
 
 import os
@@ -122,6 +128,39 @@ def get_total_issues():
     return search_count("issues", f"author:{GITHUB_USERNAME} type:issue")
 
 
+def get_language_repos(public_repos):
+    """Repos que cuenta top-langs: todos los propios (incluidos los privados)
+    si el token es un token personal de GITHUB_USERNAME; si no, los públicos."""
+    if not GITHUB_TOKEN:
+        return public_repos
+    # Con el GITHUB_TOKEN de Actions, /user responde 403: no es un usuario.
+    r = requests.get(f"{API_BASE}/user", headers=HEADERS)
+    if r.status_code != 200 or r.json().get("login", "").lower() != GITHUB_USERNAME.lower():
+        print("[WARN] El token no es personal de la cuenta; top-langs cuenta solo repos públicos.")
+        return public_repos
+
+    repos = []
+    page = 1
+    while True:
+        r = requests.get(
+            f"{API_BASE}/user/repos",
+            headers=HEADERS,
+            params={"per_page": 100, "page": page, "affiliation": "owner", "visibility": "all"},
+        )
+        if r.status_code != 200:
+            abort(f"/user/repos falló (status {r.status_code}): {r.text[:200]}")
+        batch = r.json()
+        if not batch:
+            break
+        repos.extend(batch)
+        page += 1
+
+    repos = [repo for repo in repos if not repo.get("fork")]
+    n_private = sum(1 for repo in repos if repo.get("private"))
+    print(f"[INFO] top-langs cuenta {len(repos)} repos ({n_private} privados).")
+    return repos
+
+
 def get_language_bytes(repos):
     totals = {}
     for repo in repos:
@@ -130,7 +169,9 @@ def get_language_bytes(repos):
             continue
         r = requests.get(url, headers=HEADERS)
         if r.status_code != 200:
-            abort(f"languages_url de {repo['name']} falló (status {r.status_code})")
+            # El nombre de un repo privado no va al log público de Actions.
+            name = "un repo privado" if repo.get("private") else repo["name"]
+            abort(f"languages_url de {name} falló (status {r.status_code})")
         for lang, count in r.json().items():
             totals[lang] = totals.get(lang, 0) + count
     return totals
@@ -374,7 +415,7 @@ def main():
     }
     print(f"[INFO] Stats: {stats}")
 
-    lang_bytes = get_language_bytes(repos)
+    lang_bytes = get_language_bytes(get_language_repos(repos))
     print(f"[INFO] Bytes por lenguaje: {lang_bytes}")
 
     calendar = get_contribution_calendar()
