@@ -67,9 +67,9 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 </td>
 <td align="center" width="20%">
 
-**Frameworks**
+**Frameworks / APIs**
 
-<img src="https://skillicons.dev/icons?i=spring,dotnet" />
+<img src="https://skillicons.dev/icons?i=spring,dotnet,fastapi,graphql" />
 
 </td>
 <td align="center" width="20%">
@@ -88,9 +88,9 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 </td>
 <td align="center" width="20%">
 
-**Cloud**
+**Cloud / DevOps**
 
-<img src="https://skillicons.dev/icons?i=aws" />
+<img src="https://skillicons.dev/icons?i=aws,docker,githubactions" />
 
 </td>
 </tr>
@@ -120,7 +120,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **Build Tools**
 
-<img src="https://skillicons.dev/icons?i=gradle" />
+<img src="https://skillicons.dev/icons?i=gradle,maven" />
 
 </td>
 <td align="center" width="20%">
