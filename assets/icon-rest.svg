@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" role="img" aria-label="API REST">
+  <title>API REST</title>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCEFCB"/>
+      <stop offset="0.5" stop-color="#F2A93B"/>
+      <stop offset="1" stop-color="#E8C978"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="60" fill="#242938"/>
+  <g stroke="url(#gold)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- llaves { } -->
+    <path d="M80 50C60 50 58 60 58 78V96C58 106 52 112 40 112C52 112 58 118 58 128V146C58 164 60 174 80 174"/>
+    <path d="M176 50C196 50 198 60 198 78V96C198 106 204 112 216 112C204 112 198 118 198 128V146C198 164 196 174 176 174"/>
+    <!-- request / response -->
+    <path d="M98 96H158M146 84L158 96L146 108"/>
+    <path d="M158 128H98M110 116L98 128L110 140"/>
+  </g>
+  <text x="128" y="222" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="6" fill="#F2A93B">REST</text>
+</svg>
