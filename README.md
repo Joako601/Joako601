@@ -122,7 +122,7 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
 
 **Sistemas Operativos**
 
-<img src="https://skillicons.dev/icons?i=linux,windows" />
+<img src="https://skillicons.dev/icons?i=linux" /> <img src="./assets/icon-windows.svg" width="48" alt="Windows" />
 
 </td>
 <td align="center" width="25%">
