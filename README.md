@@ -288,6 +288,6 @@ Buscando la posición de **Backend Developer Jr.**, donde pueda seguir aprendien
   <br/>
   <sub><i>Joako601</i></sub>
   <br/>
-  <sub>Última actualización: 20 de noviembre de 2026</sub>
+  <sub>Última actualización: 21 de noviembre de 2026</sub>
 </div>
 
